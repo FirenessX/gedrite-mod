@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "gedrite:block/deepslate_gedrite_ore"
+  }
+}

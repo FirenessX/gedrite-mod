@@ -1,0 +1,16 @@
+// 1.20.1	2023-08-16T01:51:50.4816538	Gedrite/Model Definitions
+7f9e51889bb821a327434c47abddae60f29f1b96 assets\gedrite\models\block\deepslate_gedrite_ore.json
+03bd2286d87db67b92014adfe814728898a72810 assets\gedrite\blockstates\deepslate_gedrite_ore.json
+5e8d3a5dc32ec539195cad82f9d18544a716574f assets\gedrite\models\item\raw_gedrite_block.json
+200d170567045c6aee80fba9a7fdd5b4a0d66b78 assets\gedrite\blockstates\raw_gedrite_block.json
+b77ef75144a64b2e0fb826efc18af1d901e8bc15 assets\gedrite\blockstates\gedrite_ore.json
+df4cea1b222c1f57845d566d74b7c8b20754ac7a assets\gedrite\models\item\metal_detector.json
+6f3e25fe5050562f6c461ad9b95379c3dc6914cb assets\gedrite\models\item\deepslate_gedrite_ore.json
+bcbeea55d0f24e6ff3211417afa5564b8bdf804a assets\gedrite\models\block\gedrite_ore.json
+f9d5d507448794286283e5384a0b80b7104cb0e4 assets\gedrite\models\block\gedrite_block.json
+d45e770fdef8248f7c09ac1583dc0c5f6c2b910c assets\gedrite\models\item\gedrite_block.json
+d68720dc8eb5431304fc61068f7274163a702c78 assets\gedrite\models\block\raw_gedrite_block.json
+06cca5876142b73c0f06fcd313edc8beceeaae9e assets\gedrite\models\item\gedrite_ingot.json
+3d2470d5b8ec26c482f529b8270cd7c8703b0f06 assets\gedrite\models\item\raw_gedrite.json
+83b738f6c3330d84231fd4f5dfe2e2571107b10a assets\gedrite\blockstates\gedrite_block.json
+c46ad788f156e26567509ba994df7232b75878ac assets\gedrite\models\item\gedrite_ore.json

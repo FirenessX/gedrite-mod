@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "gedrite",
+  "ingredient": {
+    "item": "gedrite:gedrite_ore"
+  },
+  "result": "gedrite:gedrite_ingot"
+}

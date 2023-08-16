@@ -1,0 +1,7 @@
+// 1.20.1	2023-08-16T01:51:50.4786632	Gedrite/Tags for minecraft:block
+8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\minecraft\tags\blocks\needs_iron_tool.json
+8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\minecraft\tags\blocks\needs_diamond_tool.json
+08ddc424b6f86627b39a946ed20373e885e29c94 data\minecraft\tags\blocks\needs_stone_tool.json
+08ddc424b6f86627b39a946ed20373e885e29c94 data\minecraft\tags\blocks\mineable\pickaxe.json
+08ddc424b6f86627b39a946ed20373e885e29c94 data\gedrite\tags\blocks\blocks_with_gedrite.json
+8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\fabric\tags\blocks\needs_tool_level_4.json

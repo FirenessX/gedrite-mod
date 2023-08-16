@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "gedrite:raw_gedrite_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "gedrite:raw_gedrite"
+  }
+}
