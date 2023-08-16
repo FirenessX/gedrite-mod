@@ -22,3 +22,5 @@ __Blocks:__
 + Deepslate Gedrite Ore
 + Raw Gedrite Block
 + Gedrite Block
+
+![Gedrite Blocks](https://i.imgur.com/d7TMFJj.png)
