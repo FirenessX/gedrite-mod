@@ -14,7 +14,7 @@ __Items:__
     + Gold
     + Copper
     + Gedrite
-![Gedrite Items](https://i.imgur.com/bHtYdFF.png)
+![Gedrite Items](https://i.imgur.com/7UEMRxx.png)
 
 __Blocks:__
 + Gedrite Ore
