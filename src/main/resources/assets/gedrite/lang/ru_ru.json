@@ -6,10 +6,10 @@
   "block.gedrite.raw_gedrite_block": "Блок необработанного гедрита",
   "block.gedrite.gedrite_ore": "Гедритная руда",
   "block.gedrite.deepslate_gedrite_ore": "Гедритоносный глубинный сланец",
-  "item.gedrite.metal_detector": "Металодетектор",
+  "item.gedrite.metal_detector": "Металлодетектор",
 
   "itemgroup.gedrite": "Гедрит",
-  "tooltip.gedrite.metal_detector.tooltip": "Находит металы в сфере с радиусом 8 блоков",
+  "tooltip.gedrite.metal_detector.tooltip": "Находит металлы в сфере с радиусом 8 блоков",
   "gedrite.metal_detector.foundBlock": "Успешно: ",
   "gedrite.metal_detector.dontFoundBlock": "ОШИБКА: Продолжайте искать где-нибудь ещё."
 }
