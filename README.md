@@ -26,4 +26,4 @@ __Blocks:__
 ![Gedrite Blocks](https://i.imgur.com/d7TMFJj.png)
 
 ## Crafts
-![Gedrite Crafts](https://i.imgur.com/DbPorGq.png)
+![Gedrite Crafts](https://i.imgur.com/tUotYEu.png)
