@@ -7,7 +7,7 @@ __Items:__
 + Raw Gedrite
 + Gedrite Ingot
 + Gedrited Coal
-  + This is a coal, which recombined with __gedrite__
+  + This is a coal, which recombined with __gedrite.__ It can smelt 16 items 
 + Metal Detector
   + This tool finds __metals__ in a sphere with a radius of 8 blocks
     + Iron
@@ -24,3 +24,6 @@ __Blocks:__
 + Gedrite Block
 
 ![Gedrite Blocks](https://i.imgur.com/d7TMFJj.png)
+
+## Crafts
+![Gedrite Crafts](https://i.imgur.com/DbPorGq.png)
