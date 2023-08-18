@@ -5,7 +5,7 @@
   "block.gedrite.gedrite_ore": "Gedrite Ore",
   "block.gedrite.deepslate_gedrite_ore": "Deepslate Gedrite Ore",
   "block.gedrite.gedrite_block": "Block of Gedrite",
-  "block.gedrite.gedrite_block": "Block of Raw Gedrite",
+  "block.gedrite.raw_gedrite_block": "Block of Raw Gedrite",
   "item.gedrite.metal_detector": "Metal Detector",
 
   "itemgroup.gedrite": "Gedrite Group",
