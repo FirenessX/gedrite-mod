@@ -8,10 +8,11 @@
 		"Fireness"
 	],
 	"contact": {
-		"homepage": "https://legacy.curseforge.com/minecraft/mc-mods/gedrite",
-		"sources": "https://github.com/FirenessX/gedrite-mod"
+		"homepage": "https://curseforge.com/minecraft/mc-mods/gedrite",
+		"sources": "https://github.com/FirenessX/gedrite-mod",
+		"modrinth": "https://modrinth.com/mod/gedrite-mod"
 	},
-	"license": "CC0-1.0",
+	"license": "LGPL-3.0-only",
 	"icon": "assets/gedrite/icon.png",
 	"environment": "*",
 	"entrypoints": {
@@ -19,18 +20,14 @@
 			"com.gedrite.Gedrite"
 		],
 		"client": [
-			"com.gedrite.GedriteClient"
+
 		],
 		"fabric-datagen": [
 			"com.gedrite.GedriteDataGenerator"
 		]
 	},
 	"mixins": [
-		"gedrite.mixins.json",
-		{
-			"config": "gedrite.client.mixins.json",
-			"environment": "client"
-		}
+		"gedrite.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.14.21",

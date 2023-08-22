@@ -1,7 +1,7 @@
 package com.gedrite.datagen;
 
-import com.gedrite.util.ModTags;
 import com.gedrite.blocks.ModBlocks;
+import com.gedrite.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.registry.RegistryKeys;

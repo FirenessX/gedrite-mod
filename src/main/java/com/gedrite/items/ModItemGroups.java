@@ -13,17 +13,17 @@ import net.minecraft.util.Identifier;
 public class ModItemGroups {
     public static final ItemGroup GEDRITE_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(Gedrite.MOD_ID, "cum"),
-                FabricItemGroup.builder().displayName(Text.translatable("itemgroup.gedrite")).icon(
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.gedrite")).icon(
                     () -> new ItemStack(ModItems.GEDRITE_INGOT)).entries((displayContext, entries) -> {
-                        entries.add(ModItems.GEDRITE_INGOT);
-                        entries.add(ModItems.RAW_GEDRITE);
-                        entries.add(ModBlocks.GEDRITE_ORE);
-                        entries.add(ModBlocks.DEEPSLATE_GEDRITE_ORE);
-                        entries.add(ModBlocks.GEDRITE_BLOCK);
-                        entries.add(ModBlocks.RAW_GEDRITE_BLOCK);
-                        entries.add(ModItems.METAL_DETECTOR);
-                        entries.add(ModItems.GEDRITED_COAL);
-                }).build());
+                entries.add(ModItems.GEDRITE_INGOT);
+                entries.add(ModItems.RAW_GEDRITE);
+                entries.add(ModBlocks.GEDRITE_ORE);
+                entries.add(ModBlocks.DEEPSLATE_GEDRITE_ORE);
+                entries.add(ModBlocks.GEDRITE_BLOCK);
+                entries.add(ModBlocks.RAW_GEDRITE_BLOCK);
+                entries.add(ModItems.METAL_DETECTOR);
+                entries.add(ModItems.GEDRITED_COAL);
+            }).build());
 
     public static void registerItemGroups(){
         Gedrite.LOGGER.info("Registering Item Groups for " + Gedrite.MOD_ID);

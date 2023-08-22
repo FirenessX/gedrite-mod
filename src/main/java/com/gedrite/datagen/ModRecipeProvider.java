@@ -24,7 +24,7 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     @Override
     public void generate(Consumer<RecipeJsonProvider> exporter) {
         offerSmelting(exporter, GEDRITE_SMELTABLES, RecipeCategory.MISC, ModItems.GEDRITE_INGOT,
-        0.7f, 200, "gedrite");
+                0.7f, 200, "gedrite");
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.GEDRITE_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GEDRITE_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.RAW_GEDRITE, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_GEDRITE_BLOCK);
