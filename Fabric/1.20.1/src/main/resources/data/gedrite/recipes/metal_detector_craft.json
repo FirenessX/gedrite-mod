@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "lcl",
+    "igi",
+    " i "
+  ],
+  "key": {
+    "c": {
+      "item": "gedrite:gedrite_block"
+    },
+    "i": {
+      "item": "minecraft:iron_ingot"
+    },
+    "l": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "g": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "result": {
+    "item": "gedrite:metal_detector"
+  },
+  "show_notification": true
+}

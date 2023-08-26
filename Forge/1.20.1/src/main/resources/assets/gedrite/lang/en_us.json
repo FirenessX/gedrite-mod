@@ -1,0 +1,15 @@
+{
+  "item.gedrite.gedrite_ingot": "Gedrite",
+  "item.gedrite.raw_gedrite": "Raw Gedrite",
+  "item.gedrite.gedrited_coal": "Gedrited Coal",
+  "block.gedrite.gedrite_ore": "Gedrite Ore",
+  "block.gedrite.deepslate_gedrite_ore": "Deepslate Gedrite Ore",
+  "block.gedrite.gedrite_block": "Block of Gedrite",
+  "block.gedrite.raw_gedrite_block": "Block of Raw Gedrite",
+  "item.gedrite.metal_detector": "Metal Detector",
+
+  "creativetab.gedrite_tab": "Gedrite Group",
+  "tooltip.gedrite.metal_detector.tooltip": "Finds metals in a sphere with a radius of 8 blocks",
+  "gedrite.metal_detector.foundBlock": "Success: ",
+  "gedrite.metal_detector.dontFoundBlock": "ERROR: Keep looking elsewhere"
+}

@@ -1,9 +1,0 @@
-{
-  "replace": false,
-  "values": [
-    "#gedrite:blocks_with_gedrite",
-    "#minecraft:iron_ores",
-    "#minecraft:copper_ores",
-    "#minecraft:gold_ores"
-  ]
-}

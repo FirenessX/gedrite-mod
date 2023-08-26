@@ -1,0 +1,26 @@
+{
+  "criteria": {
+    "your_criterion_name": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "gedrite:raw_gedrite"
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "recipes": [
+      "gedrite:raw_gedrite_block_from_raw_gedrite",
+      "gedrite:raw_gedrite_from_raw_gedrite_block",
+      "gedrite:gedrite_from_blasting_raw_gedrite",
+      "gedrite:gedrite_from_smelting_raw_gedrite",
+      "gedrite:gedrite_from_blasting_gedrite_ore",
+      "gedrite:gedrite_from_smelting_gedrite_ore",
+      "gedrite:gedrite_from_blasting_deepslate_gedrite_ore",
+      "gedrite:gedrite_from_smelting_deepslate_gedrite_ore"
+    ]
+  }
+}

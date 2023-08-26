@@ -1,0 +1,28 @@
+package com.gedrite.items;
+
+import com.gedrite.Gedrite;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.RegistryObject;
+
+public class ModCreativeModTabs {
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Gedrite.MOD_ID);
+
+    public static final RegistryObject<CreativeModeTab> GEDRITE_TAB = CREATIVE_MODE_TABS.register("gedirte_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.GEDRITE_INGOT.get()))
+                    .title(Component.translatable("creativetab.gedrite_tab"))
+                    .displayItems((pParameters, pOutput) -> {
+                        pOutput.accept(ModItems.GEDRITE_INGOT.get());
+                        pOutput.accept(ModItems.RAW_GEDRITE.get());
+                    })
+                    .build());
+
+    public static void register(IEventBus eventBus) {
+        CREATIVE_MODE_TABS.register(eventBus);
+    }
+}

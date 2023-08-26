@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "gedrite",
+	"version": "${version}",
+	"name": "Gedrite",
+	"description": "Adds Gedrite in your world. Gedrite is a liquid and useful metal, you can even eat it! See more information in \"Gedrite Mod\" page in Curseforge/Modrinth",
+	"authors": [
+		"Fireness"
+	],
+	"contact": {
+		"homepage": "https://curseforge.com/minecraft/mc-mods/gedrite",
+		"sources": "https://github.com/FirenessX/gedrite-mod",
+		"modrinth": "https://modrinth.com/mod/gedrite-mod"
+	},
+	"license": "LGPL-3.0-only",
+	"icon": "assets/gedrite/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.gedrite.Gedrite"
+		],
+		"client": [
+
+		],
+		"fabric-datagen": [
+			"com.gedrite.GedriteDataGenerator"
+		]
+	},
+	"mixins": [
+		"gedrite.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.19.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
