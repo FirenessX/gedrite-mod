@@ -45,10 +45,10 @@ public class Gedrite {
         modEventBus.addListener(this::addCreative);
         ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
-        ModCreativeModTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModCreativeModTabs.register(modEventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -57,6 +57,10 @@ public class Gedrite {
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.GEDRITE_INGOT);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
             event.accept(ModItems.GEDRITE_INGOT);
         }
 
@@ -70,6 +74,22 @@ public class Gedrite {
 
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.GEDRITED_COAL);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.GEDRITE_BLOCK);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(ModBlocks.RAW_GEDRITE_BLOCK);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(ModBlocks.GEDRITE_ORE);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
+            event.accept(ModBlocks.DEEPSLATE_GEDRITE_ORE);
         }
 
     }

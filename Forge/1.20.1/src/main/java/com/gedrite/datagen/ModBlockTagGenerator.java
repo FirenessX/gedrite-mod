@@ -41,7 +41,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 .add(ModBlocks.DEEPSLATE_GEDRITE_ORE.get());
 
         this.tag(BlockTags.NEEDS_STONE_TOOL)
-                .add(ModBlocks.GEDRITE_BLOCK.get())
+                .add(ModBlocks.GEDRITE_BLOCK.get());
+
+        this.tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.RAW_GEDRITE_BLOCK.get())
                 .add(ModBlocks.GEDRITE_ORE.get())
                 .add(ModBlocks.DEEPSLATE_GEDRITE_ORE.get());

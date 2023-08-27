@@ -16,7 +16,7 @@ import net.minecraft.util.Identifier;
 
 public class ModBlocks {
     public static final Block GEDRITE_BLOCK = registerBlock("gedrite_block",
-            new FallingBlock(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).sounds(BlockSoundGroup.HONEY).velocityMultiplier(0.4f).jumpVelocityMultiplier(0.5f).nonOpaque()));
+            new FallingBlock(FabricBlockSettings.copyOf(Blocks.STONE).sounds(BlockSoundGroup.HONEY).velocityMultiplier(0.6f).jumpVelocityMultiplier(0.75f)));
     public static final Block RAW_GEDRITE_BLOCK = registerBlock("raw_gedrite_block",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).sounds(BlockSoundGroup.CORAL)));
     public static final Block GEDRITE_ORE = registerBlock("gedrite_ore",

@@ -20,7 +20,7 @@ public class ModItems {
     public static final Item GEDRITE_INGOT = registerItem("gedrite_ingot", new Item(new FabricItemSettings().food(ModFoodComponents.GEDRITE_INGOT)));
     public static final Item RAW_GEDRITE = registerItem("raw_gedrite", new Item(new FabricItemSettings()));
     ///tools
-    public static final Item METAL_DETECTOR = registerItem("metal_detector", new MetalDetectorItem(new FabricItemSettings().maxDamage(69)));
+    public static final Item METAL_DETECTOR = registerItem("metal_detector", new MetalDetectorItem(new FabricItemSettings().maxDamage(9)));
     ///fuel
     public static final Item GEDRITED_COAL = registerItem("gedrited_coal", new Item(new FabricItemSettings()));
 
@@ -44,6 +44,10 @@ public class ModItems {
         entries.add(METAL_DETECTOR);
     }
 
+    private static void addItemsToFoodTabItemGroup(FabricItemGroupEntries entries){
+        entries.add(GEDRITE_INGOT);
+    }
+
     private static Item registerItem(String id, Item item){
         return Registry.register(Registries.ITEM, new Identifier(Gedrite.MOD_ID, id), item);
     }
@@ -58,6 +62,7 @@ public class ModItems {
         Gedrite.LOGGER.debug("Registering items for: " + Gedrite.MOD_ID);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToIngredientTabItemGroup);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(ModItems::addItemsToToolsTabItemGroup);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(ModItems::addItemsToFoodTabItemGroup);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register(ModItems::addItemsToNaturalTabItemGroup);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(ModItems::addItemsToBuildingTabItemGroup);
     }

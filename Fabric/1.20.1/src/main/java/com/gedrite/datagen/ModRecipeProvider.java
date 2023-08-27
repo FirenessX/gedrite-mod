@@ -28,20 +28,6 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.GEDRITE_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.GEDRITE_BLOCK);
         offerReversibleCompactingRecipes(exporter, RecipeCategory.MISC, ModItems.RAW_GEDRITE, RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_GEDRITE_BLOCK);
-//        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GEDRITE_BLOCK, 1)
-//                .pattern("###")
-//                .pattern("###")
-//                .pattern("###")
-//                .input('#', ModItems.GEDRITE_INGOT)
-//                .criterion(hasItem(ModItems.GEDRITE_INGOT), conditionsFromItem(ModItems.GEDRITE_INGOT))
-//                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.GEDRITE_BLOCK)));
-//        ShapedRecipeJsonBuilder.create(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RAW_GEDRITE_BLOCK, 1)
-//                .pattern("###")
-//                .pattern("###")
-//                .pattern("###")
-//                .input('#', ModItems.RAW_GEDRITE)
-//                .criterion(hasItem(ModItems.RAW_GEDRITE), conditionsFromItem(ModItems.RAW_GEDRITE))
-//                .offerTo(exporter, new Identifier(getRecipeName(ModBlocks.RAW_GEDRITE_BLOCK)));
         ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.METAL_DETECTOR, 1)
                 .pattern("lcl")
                 .pattern("igi")

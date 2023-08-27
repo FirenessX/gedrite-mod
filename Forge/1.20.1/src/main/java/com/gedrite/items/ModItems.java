@@ -24,7 +24,7 @@ public class ModItems {
            () -> new FuelItem(new Item.Properties(), 3200));
 
     public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",
-           () -> new MetalDetectorItem(new Item.Properties().durability(69)));
+           () -> new MetalDetectorItem(new Item.Properties().durability(9)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
