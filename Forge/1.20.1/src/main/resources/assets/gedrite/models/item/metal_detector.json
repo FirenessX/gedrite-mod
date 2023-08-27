@@ -1,6 +1,15 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "gedrite:item/metal_detector"
+  "parent": "minecraft:item/handheld",
+  "loader": "forge:separate_transforms",
+  "base": {
+    "parent": "gedrite:item/metal_detector_3d"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "gedrite:item/metal_detector_2d"
+    },
+    "fixed": {
+      "parent": "gedrite:item/metal_detector_2d"
+    }
   }
 }

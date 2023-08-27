@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_gedrite_ingot": {
+    "has_gedrite_block": {
       "conditions": {
         "items": [
           {
             "items": [
-              "gedrite:gedrite_ingot"
+              "gedrite:gedrite_block"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gedrite:gedrite_block"
+        "recipe": "gedrite:metal_detector_craft"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_gedrite_ingot",
+      "has_gedrite_block",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "gedrite:gedrite_block"
+      "gedrite:metal_detector_craft"
     ]
   },
   "sends_telemetry_event": false

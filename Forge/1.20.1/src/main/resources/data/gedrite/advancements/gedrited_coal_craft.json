@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gedrite:gedrite_block"
+        "recipe": "gedrite:gedrited_coal_craft"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "gedrite:gedrite_block"
+      "gedrite:gedrited_coal_craft"
     ]
   },
   "sends_telemetry_event": false

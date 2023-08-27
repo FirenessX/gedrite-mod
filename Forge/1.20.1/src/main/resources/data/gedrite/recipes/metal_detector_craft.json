@@ -2,12 +2,12 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "pattern": [
-    "lcl",
+    "l#l",
     "igi",
     " i "
   ],
   "key": {
-    "c": {
+    "#": {
       "item": "gedrite:gedrite_block"
     },
     "i": {

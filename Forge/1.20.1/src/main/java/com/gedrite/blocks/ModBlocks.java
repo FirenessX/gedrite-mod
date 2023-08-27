@@ -19,7 +19,7 @@ public class ModBlocks {
         DeferredRegister.create(ForgeRegistries.BLOCKS, Gedrite.MOD_ID);
 
     public static final RegistryObject<Block> GEDRITE_BLOCK = registerBlock("gedrite_block",
-            () -> new FallingBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.HONEY_BLOCK)));
+            () -> new FallingBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).speedFactor(0.4F).jumpFactor(0.5F).sound(SoundType.HONEY_BLOCK)));
 
     public static final RegistryObject<Block> RAW_GEDRITE_BLOCK = registerBlock("raw_gedrite_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK).sound(SoundType.CORAL_BLOCK)));

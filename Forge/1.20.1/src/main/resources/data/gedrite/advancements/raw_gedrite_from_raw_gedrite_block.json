@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_gedrite_ingot": {
+    "has_raw_gedrite_block": {
       "conditions": {
         "items": [
           {
             "items": [
-              "gedrite:gedrite_ingot"
+              "gedrite:raw_gedrite_block"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gedrite:gedrite_block"
+        "recipe": "gedrite:raw_gedrite_from_raw_gedrite_block"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_gedrite_ingot",
+      "has_raw_gedrite_block",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "gedrite:gedrite_block"
+      "gedrite:raw_gedrite_from_raw_gedrite_block"
     ]
   },
   "sends_telemetry_event": false

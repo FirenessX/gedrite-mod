@@ -7,6 +7,7 @@ import com.gedrite.items.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -46,6 +47,38 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.GEDRITE_BLOCK.get()), has(ModBlocks.GEDRITE_BLOCK.get()))
                 .save(pWriter);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RAW_GEDRITE_BLOCK.get())
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .define('#', ModItems.RAW_GEDRITE.get())
+                .unlockedBy(getHasName(ModItems.RAW_GEDRITE.get()), has(ModItems.RAW_GEDRITE.get()))
+                .save(pWriter);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RAW_GEDRITE.get(), 9)
+                .requires(ModBlocks.RAW_GEDRITE_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.RAW_GEDRITE_BLOCK.get()), has(ModBlocks.RAW_GEDRITE_BLOCK.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.GEDRITED_COAL.get())
+                .pattern("g g")
+                .pattern("###")
+                .pattern("g g")
+                .define('g', ModItems.GEDRITE_INGOT.get())
+                .define('#', Items.COAL)
+                .unlockedBy(getHasName(ModItems.GEDRITE_INGOT.get()), has(ModItems.GEDRITE_INGOT.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModItems.METAL_DETECTOR.get())
+                .pattern("l#l")
+                .pattern("igi")
+                .pattern(" i ")
+                .define('#', ModBlocks.GEDRITE_BLOCK.get())
+                .define('l', Items.GLOWSTONE_DUST)
+                .define('i', Items.IRON_INGOT)
+                .define('g', Items.GOLD_INGOT)
+                .unlockedBy(getHasName(ModBlocks.GEDRITE_BLOCK.get()), has(ModBlocks.GEDRITE_BLOCK.get()))
+                .save(pWriter);
 
     }
 

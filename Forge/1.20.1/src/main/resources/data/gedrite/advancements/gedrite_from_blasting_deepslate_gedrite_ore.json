@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_gedrite_ingot": {
+    "has_deepslate_gedrite_ore": {
       "conditions": {
         "items": [
           {
             "items": [
-              "gedrite:gedrite_ingot"
+              "gedrite:deepslate_gedrite_ore"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gedrite:gedrite_block"
+        "recipe": "gedrite:gedrite_from_blasting_deepslate_gedrite_ore"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_gedrite_ingot",
+      "has_deepslate_gedrite_ore",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "gedrite:gedrite_block"
+      "gedrite:gedrite_from_blasting_deepslate_gedrite_ore"
     ]
   },
   "sends_telemetry_event": false
