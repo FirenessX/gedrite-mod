@@ -3,7 +3,7 @@
 
 ## Adds Gedrite in your world. Gedrite is a liquid and useful metal. you can even _eat_ it!
 
-__Items:__
+## Items:
 + Raw Gedrite
 + Gedrite Ingot
 + Gedrited Coal
@@ -17,7 +17,7 @@ __Items:__
 
 ![Gedrite Items](https://i.imgur.com/PrNnJHz.png)
 
-__Blocks:__
+## Blocks:
 + Gedrite Ore
 + Deepslate Gedrite Ore
 + Raw Gedrite Block
