@@ -20,7 +20,7 @@ public class ModItems {
     public static final Item GEDRITE_INGOT = registerItem("gedrite_ingot", new Item(new FabricItemSettings().food(ModFoodComponents.GEDRITE_INGOT)));
     public static final Item RAW_GEDRITE = registerItem("raw_gedrite", new Item(new FabricItemSettings()));
     ///tools
-    public static final Item METAL_DETECTOR = registerItem("metal_detector", new MetalDetectorItem(new FabricItemSettings().maxDamage(69)));
+    public static final Item METAL_DETECTOR = registerItem("metal_detector", new MetalDetectorItem(new FabricItemSettings().maxDamage(9)));
     ///fuel
     public static final Item GEDRITED_COAL = registerItem("gedrited_coal", new Item(new FabricItemSettings()));
 
@@ -30,12 +30,14 @@ public class ModItems {
 
     public static void addItemsToItemGroup() {
         itemAddToItemGroup(ItemGroups.INGREDIENTS, GEDRITE_INGOT);
+        itemAddToItemGroup(ItemGroups.FOOD_AND_DRINK, GEDRITE_INGOT);
         itemAddToItemGroup(ItemGroups.INGREDIENTS, RAW_GEDRITE);
         itemAddToItemGroup(ItemGroups.TOOLS, METAL_DETECTOR);
 
         blockAddToItemGroup(ItemGroups.BUILDING_BLOCKS, GEDRITE_BLOCK);
         blockAddToItemGroup(ItemGroups.NATURAL, RAW_GEDRITE_BLOCK);
-
+        blockAddToItemGroup(ItemGroups.NATURAL, GEDRITE_ORE);
+        blockAddToItemGroup(ItemGroups.NATURAL, DEEPSLATE_GEDRITE_ORE);
 
         itemAddToItemGroup(ModItemGroups.GEDRITE, GEDRITE_INGOT);
         itemAddToItemGroup(ModItemGroups.GEDRITE, RAW_GEDRITE);

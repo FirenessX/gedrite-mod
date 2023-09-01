@@ -19,7 +19,7 @@ public class Gedrite implements ModInitializer {
 	public static final String MOD_ID = "gedrite";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-	public static final RegistryKey<PlacedFeature> GEDRITE_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier("gedrite","gedrite_ore"));
+	public static final RegistryKey<PlacedFeature> GEDRITE_ORE_PLACED_KEY = RegistryKey.of(RegistryKeys.PLACED_FEATURE, new Identifier("gedrite","gedrite_ore_placed"));
 
 	@Override
 	public void onInitialize() {

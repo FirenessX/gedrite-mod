@@ -15,7 +15,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "gedrite:gedrited_coal_craft"
+        "recipe": "gedrite:gedrite_ingot"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

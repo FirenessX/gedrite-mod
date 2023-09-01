@@ -47,12 +47,12 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.DEEPSLATE_GEDRITE_ORE);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL)
-                .add(ModBlocks.GEDRITE_BLOCK)
                 .add(ModBlocks.RAW_GEDRITE_BLOCK)
                 .add(ModBlocks.GEDRITE_ORE)
                 .add(ModBlocks.DEEPSLATE_GEDRITE_ORE);
 
-        getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL);
+        getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
+                .add(ModBlocks.GEDRITE_BLOCK);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL);
 
