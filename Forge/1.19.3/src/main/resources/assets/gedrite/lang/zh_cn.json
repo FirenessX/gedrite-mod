@@ -1,0 +1,15 @@
+{
+  "item.gedrite.gedrite_ingot": "铝直闪石",
+  "item.gedrite.raw_gedrite": "粗铝直闪石",
+  "item.gedrite.gedrited_coal": "铝直闪石煤炭",
+  "block.gedrite.gedrite_ore": "铝直闪石矿石",
+  "block.gedrite.deepslate_gedrite_ore": "深层铝直闪石矿石",
+  "block.gedrite.gedrite_block": "铝直闪石块",
+  "block.gedrite.raw_gedrite_block": "粗铝直闪石块",
+  "item.gedrite.metal_detector": "金属探测器",
+
+  "creativetab.gedrite_tab": "铝直闪石",
+  "tooltip.gedrite.metal_detector.tooltip": "在使用点探测半径8个方块内的金属",
+  "gedrite.metal_detector.foundBlock": "探测到：",
+  "gedrite.metal_detector.dontFoundBlock": "未探测到金属"
+}

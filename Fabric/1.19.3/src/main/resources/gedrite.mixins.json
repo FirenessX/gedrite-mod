@@ -1,0 +1,16 @@
+{
+	"required": true,
+	"package": "com.gedrite.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+
+	],
+	"client": [
+		"ItemRendererAccessor",
+		"ItemRendererMixin",
+		"ModelLoaderMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

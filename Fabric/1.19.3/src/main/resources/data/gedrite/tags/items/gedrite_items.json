@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "gedrite:gedrite_ingot",
+    "gedrite:raw_gedrite",
+    "gedrite:metal_detector",
+    "gedrite:gedrited_coal"
+  ]
+}

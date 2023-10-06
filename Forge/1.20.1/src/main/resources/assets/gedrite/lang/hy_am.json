@@ -1,0 +1,15 @@
+{
+  "item.gedrite.gedrite_ingot": "Գեդրիտի ձուլակտոր",
+  "item.gedrite.raw_gedrite": "Հում գեդրիտ",
+  "item.gedrite.gedrited_coal": "Գեդրիացրած ածուխ",
+  "block.gedrite.gedrite_block": "Գեդրիտի բլոկ",
+  "block.gedrite.raw_gedrite_block": "Հում գեդրիտի բլոկ",
+  "block.gedrite.gedrite_ore": "Գեդրիտի հանքաքար",
+  "block.gedrite.deepslate_gedrite_ore": "Խորը շերտաքարի գեդրիտի հանքաքար",
+  "item.gedrite.metal_detector": "Մետաղական դետեկտոր",
+
+  "creativetab.gedrite_tab": "Գեդրիտ",
+  "tooltip.gedrite.metal_detector.tooltip": "Փնտրում է մետաղ 8 բլոկ շառավղով տարածքի (գնդի) մեջ։",
+  "gedrite.metal_detector.foundBlock": "Հաջողված․ ",
+  "gedrite.metal_detector.dontFoundBlock": "ՍԽԱԼ: Փործեք փնտրել ուրիշ տեղ։"
+}
