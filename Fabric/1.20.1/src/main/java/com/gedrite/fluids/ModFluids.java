@@ -28,7 +28,7 @@ public class ModFluids {
 
         GEDRITED_WATER_BLOCK = Registry.register(Registries.BLOCK, new Identifier(Gedrite.MOD_ID, "gedrited_water_block"),
                 new FluidBlock(ModFluids.GEDRITED_WATER, FabricBlockSettings
-                        .copyOf(Blocks.WATER)
+                        .copy(Blocks.WATER)
                         .replaceable()
                         .pistonBehavior(PistonBehavior.DESTROY)
                         .dropsNothing()

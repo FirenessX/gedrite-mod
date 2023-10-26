@@ -27,7 +27,10 @@ import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 import org.jetbrains.annotations.Nullable;
 
-public class GedritedWaterFluid extends FlowableFluid {
+public abstract class GedritedWaterFluid extends FlowableFluid {
+    public GedritedWaterFluid(){
+        super();
+    }
     @Override
     public Fluid getFlowing() {
         return ModFluids.FLOWING_GEDRITED_WATER;
@@ -50,6 +53,10 @@ public class GedritedWaterFluid extends FlowableFluid {
 
     }
 
+    public ParticleEffect getParticle() {
+        return ParticleTypes.DRIPPING_WATER;
+    }
+
     @Override
     protected boolean isInfinite(World world) {
         return false;
@@ -68,7 +75,7 @@ public class GedritedWaterFluid extends FlowableFluid {
 
     @Override
     protected int getLevelDecreasePerBlock(WorldView world) {
-        return 3/2;
+        return 1;
     }
 
     @Override
@@ -83,12 +90,17 @@ public class GedritedWaterFluid extends FlowableFluid {
 
     @Override
     public int getTickRate(WorldView world) {
-        return 5 * (3/2);
+        return 5;
     }
 
     @Override
     protected float getBlastResistance() {
         return 0;
+    }
+
+    @Override
+    public FluidState getDefaultState() {
+        return ;
     }
 
     @Override
@@ -140,7 +152,7 @@ public class GedritedWaterFluid extends FlowableFluid {
 
         @Override
         public int getLevel(FluidState state) {
-            return 6;
+            return 8;
         }
 
         @Override
