@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "gedrite:gedrited_water",
-    "gedrite:flowing_gedrited_water"
+    "gedrite:gedrited_water_still",
+    "gedrite:gedrited_water_flow"
   ]
 }

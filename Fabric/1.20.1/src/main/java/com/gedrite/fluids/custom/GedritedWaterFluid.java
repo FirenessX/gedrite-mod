@@ -27,10 +27,7 @@ import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
 import org.jetbrains.annotations.Nullable;
 
-public abstract class GedritedWaterFluid extends FlowableFluid {
-    public GedritedWaterFluid(){
-        super();
-    }
+public class GedritedWaterFluid extends FlowableFluid {
     @Override
     public Fluid getFlowing() {
         return ModFluids.FLOWING_GEDRITED_WATER;
@@ -95,17 +92,12 @@ public abstract class GedritedWaterFluid extends FlowableFluid {
 
     @Override
     protected float getBlastResistance() {
-        return 0;
-    }
-
-    @Override
-    public FluidState getDefaultState() {
-        return ;
+        return 100.0F;
     }
 
     @Override
     protected BlockState toBlockState(FluidState state) {
-        return (BlockState)ModFluids.GEDRITED_WATER_BLOCK.getDefaultState().with(FluidBlock.LEVEL, getBlockStateLevel(state));
+        return (BlockState)ModFluids.GEDRITED_WATER_BLOCK.getDefaultState().with(Properties.LEVEL_15, getBlockStateLevel(state));
     }
 
     @Override

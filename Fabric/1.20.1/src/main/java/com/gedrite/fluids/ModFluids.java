@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.FluidBlock;
+import net.minecraft.block.MapColor;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.fluid.*;
 import net.minecraft.registry.Registries;
@@ -22,17 +23,14 @@ public class ModFluids {
 
     public static void register() {
         GEDRITED_WATER = Registry.register(Registries.FLUID,
-                new Identifier(Gedrite.MOD_ID, "gedrited_water"), new GedritedWaterFluid.Still());
+                new Identifier(Gedrite.MOD_ID, "gedrited_water_still"), new GedritedWaterFluid.Still());
         FLOWING_GEDRITED_WATER = Registry.register(Registries.FLUID,
-                new Identifier(Gedrite.MOD_ID, "flowing_gedrited_water"), new GedritedWaterFluid.Flowing());
+                new Identifier(Gedrite.MOD_ID, "gedrited_water_flow"), new GedritedWaterFluid.Flowing());
 
         GEDRITED_WATER_BLOCK = Registry.register(Registries.BLOCK, new Identifier(Gedrite.MOD_ID, "gedrited_water_block"),
                 new FluidBlock(ModFluids.GEDRITED_WATER, FabricBlockSettings
                         .copy(Blocks.WATER)
-                        .replaceable()
-                        .pistonBehavior(PistonBehavior.DESTROY)
-                        .dropsNothing()
-                        .liquid()) {});
+                        .mapColor(MapColor.DARK_DULL_PINK)) {});
     }
 
     static {

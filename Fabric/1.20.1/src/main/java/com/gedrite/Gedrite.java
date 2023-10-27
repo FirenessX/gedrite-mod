@@ -37,11 +37,11 @@ public class Gedrite implements ModInitializer {
 
 		FluidRenderHandlerRegistry.INSTANCE.register(ModFluids.GEDRITED_WATER, ModFluids.FLOWING_GEDRITED_WATER,
 				new SimpleFluidRenderHandler(
-						new Identifier("minecraft:block/water_still"),
-						new Identifier("minecraft:block/water_flow"),
+						new Identifier("gedrite:block/gedrited_water_still"),
+						new Identifier("gedrite:block/gedrited_water_flow"),
 						0xFF31DF
 				));
-		
+
 		BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(),
 				ModFluids.GEDRITED_WATER, ModFluids.FLOWING_GEDRITED_WATER);
 	}
