@@ -21,6 +21,11 @@ public class ModFluids {
     public static FlowableFluid FLOWING_GEDRITED_WATER;
     public static Block GEDRITED_WATER_BLOCK;
 
+    public static boolean isGedritedWater(FluidState state) {
+        return state.isOf(ModFluids.GEDRITED_WATER) || state.isOf(ModFluids.FLOWING_GEDRITED_WATER);
+    }
+
+
     public static void register() {
         GEDRITED_WATER = Registry.register(Registries.FLUID,
                 new Identifier(Gedrite.MOD_ID, "gedrited_water_still"), new GedritedWaterFluid.Still());

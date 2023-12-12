@@ -6,6 +6,7 @@
 
 	],
 	"client": [
+		"GedritedWaterMixin",
 		"ItemRendererAccessor",
 		"ItemRendererMixin",
 		"ModelLoaderMixin"
