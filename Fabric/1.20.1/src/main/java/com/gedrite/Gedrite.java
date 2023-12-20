@@ -2,7 +2,6 @@ package com.gedrite;
 
 import com.gedrite.blocks.ModBlocks;
 import com.gedrite.fluids.ModFluids;
-import com.gedrite.handler.GedriteHandler;
 import com.gedrite.items.ModItemGroups;
 import com.gedrite.items.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -35,7 +34,6 @@ public class Gedrite implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		FuelRegistry.INSTANCE.add(ModItems.GEDRITED_COAL, 3200);
 		ModFluids.register();
-		GedriteHandler.register();
 
 		FluidRenderHandlerRegistry.INSTANCE.register(ModFluids.GEDRITED_WATER, ModFluids.FLOWING_GEDRITED_WATER,
 				new SimpleFluidRenderHandler(

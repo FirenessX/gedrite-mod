@@ -2,6 +2,7 @@ package com.gedrite.util;
 
 import com.gedrite.Gedrite;
 import net.minecraft.block.Block;
+import net.minecraft.fluid.Fluid;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;
@@ -26,5 +27,13 @@ public class ModTags {
         private static TagKey<Item> createTag(String name){
             return TagKey.of(RegistryKeys.ITEM, new Identifier(Gedrite.MOD_ID, name));
         }
+
+    }
+
+    //////////  Gedirted Water
+    public static final TagKey<Fluid> GEDRITED_WATER = ModTags.of("gedrited_water.json");
+    //////////
+    private static TagKey<Fluid> of(String id) {
+        return TagKey.of(RegistryKeys.FLUID, new Identifier(id));
     }
 }

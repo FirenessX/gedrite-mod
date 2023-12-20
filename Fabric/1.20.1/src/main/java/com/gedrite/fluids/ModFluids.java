@@ -32,7 +32,8 @@ public class ModFluids {
         FLOWING_GEDRITED_WATER = Registry.register(Registries.FLUID,
                 new Identifier(Gedrite.MOD_ID, "gedrited_water_flow"), new GedritedWaterFluid.Flowing());
 
-        GEDRITED_WATER_BLOCK = Registry.register(Registries.BLOCK, new Identifier(Gedrite.MOD_ID, "gedrited_water_block"),
+        GEDRITED_WATER_BLOCK = Registry.register(Registries.BLOCK,
+                new Identifier(Gedrite.MOD_ID, "gedrited_water_block"),
                 new FluidBlock(ModFluids.GEDRITED_WATER, FabricBlockSettings
                         .copy(Blocks.WATER)
                         .mapColor(MapColor.DARK_DULL_PINK)) {});
