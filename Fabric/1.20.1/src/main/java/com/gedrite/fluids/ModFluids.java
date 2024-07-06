@@ -3,16 +3,25 @@ package com.gedrite.fluids;
 import com.gedrite.Gedrite;
 import com.gedrite.fluids.custom.GedritedWaterFluid;
 import com.google.common.collect.UnmodifiableIterator;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.FluidBlock;
 import net.minecraft.block.MapColor;
-import net.minecraft.block.piston.PistonBehavior;
-import net.minecraft.fluid.*;
+import net.minecraft.client.render.Camera;
+import net.minecraft.fluid.FlowableFluid;
+import net.minecraft.fluid.Fluid;
+import net.minecraft.fluid.FluidState;
+import net.minecraft.item.BucketItem;
+import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.Vec3d;
+import net.minecraft.world.BlockView;
 
 import java.util.Iterator;
 
@@ -20,6 +29,8 @@ public class ModFluids {
     public static FlowableFluid GEDRITED_WATER;
     public static FlowableFluid FLOWING_GEDRITED_WATER;
     public static Block GEDRITED_WATER_BLOCK;
+
+    public static Item GEDRITED_WATER_BUCKET;
 
     public static boolean isGedritedWater(FluidState state) {
         return state.isOf(ModFluids.GEDRITED_WATER) || state.isOf(ModFluids.FLOWING_GEDRITED_WATER);
@@ -29,6 +40,7 @@ public class ModFluids {
     public static void register() {
         GEDRITED_WATER = Registry.register(Registries.FLUID,
                 new Identifier(Gedrite.MOD_ID, "gedrited_water_still"), new GedritedWaterFluid.Still());
+
         FLOWING_GEDRITED_WATER = Registry.register(Registries.FLUID,
                 new Identifier(Gedrite.MOD_ID, "gedrited_water_flow"), new GedritedWaterFluid.Flowing());
 
@@ -36,7 +48,11 @@ public class ModFluids {
                 new Identifier(Gedrite.MOD_ID, "gedrited_water_block"),
                 new FluidBlock(ModFluids.GEDRITED_WATER, FabricBlockSettings
                         .copy(Blocks.WATER)
-                        .mapColor(MapColor.DARK_DULL_PINK)) {});
+                        .mapColor(MapColor.DULL_PINK)) {});
+
+
+        GEDRITED_WATER_BUCKET = Registry.register(Registries.ITEM,
+                new Identifier(Gedrite.MOD_ID, "gedrited_water_bucket"), new BucketItem(ModFluids.GEDRITED_WATER, new FabricItemSettings().recipeRemainder(Items.BUCKET).maxCount(1)));
     }
 
     static {

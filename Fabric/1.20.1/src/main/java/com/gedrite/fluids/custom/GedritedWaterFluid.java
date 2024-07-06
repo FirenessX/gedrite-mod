@@ -1,18 +1,23 @@
 package com.gedrite.fluids.custom;
 
 import com.gedrite.fluids.ModFluids;
+import com.gedrite.items.ModItems;
+import com.gedrite.particles.ModParticleTypes;
+import com.gedrite.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.FluidBlock;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
-import net.minecraft.fluid.WaterFluid;
 import net.minecraft.item.Item;
 import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.registry.tag.FluidTags;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.StateManager;
@@ -25,7 +30,6 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 import net.minecraft.world.WorldView;
-import org.jetbrains.annotations.Nullable;
 
 public class GedritedWaterFluid extends FlowableFluid {
     @Override
@@ -44,19 +48,36 @@ public class GedritedWaterFluid extends FlowableFluid {
             if (random.nextInt(64) == 0) {
                 world.playSound((double)pos.getX() + 0.5, (double)pos.getY() + 0.5, (double)pos.getZ() + 0.5, SoundEvents.BLOCK_WATER_AMBIENT, SoundCategory.BLOCKS, random.nextFloat() * 0.25F + 0.75F, random.nextFloat() + 0.5F, false);
             }
-        } else if (random.nextInt(10) == 0) {
-            world.addParticle(ParticleTypes.UNDERWATER, (double)pos.getX() + random.nextDouble(), (double)pos.getY() + random.nextDouble(), (double)pos.getZ() + random.nextDouble(), 0.0, 0.0, 0.0);
         }
-
     }
 
     public ParticleEffect getParticle() {
-        return ParticleTypes.DRIPPING_WATER;
+        return ModParticleTypes.DRIPPING_GEDRITED_WATER;
+    }
+
+    private void playSplashSound(WorldAccess world, BlockPos pos){
+        world.playSound(null, pos, SoundEvents.ENTITY_GENERIC_SPLASH, SoundCategory.BLOCKS, 1.0f, 1.0f);
     }
 
     @Override
     protected boolean isInfinite(World world) {
         return false;
+    }
+
+    @Override
+    protected void flow(WorldAccess world, BlockPos pos, BlockState state, Direction direction, FluidState fluidState) {
+        if (direction == Direction.DOWN) {
+            FluidState fluidState2 = world.getFluidState(pos);
+            if (this.isIn(ModTags.GEDRITED_WATER) && (fluidState2.isIn(FluidTags.WATER) && !fluidState2.isIn(ModTags.GEDRITED_WATER))) {
+                if (state.getBlock() instanceof FluidBlock) {
+                    world.setBlockState(pos, Blocks.COARSE_DIRT.getDefaultState(), Block.NOTIFY_ALL);
+                }
+                this.playSplashSound(world, pos);
+                return;
+            }
+
+        }
+        super.flow(world, pos, state, direction, fluidState);
     }
 
     @Override
@@ -67,27 +88,27 @@ public class GedritedWaterFluid extends FlowableFluid {
 
     @Override
     protected int getFlowSpeed(WorldView world) {
-        return 6;
+        return 3;
     }
 
     @Override
     protected int getLevelDecreasePerBlock(WorldView world) {
-        return 1;
+        return 2;
     }
 
     @Override
     public Item getBucketItem() {
-        return null;
+        return ModFluids.GEDRITED_WATER_BUCKET;
     }
 
     @Override
     protected boolean canBeReplacedWith(FluidState state, BlockView world, BlockPos pos, Fluid fluid, Direction direction) {
-        return false;
+        return direction == Direction.DOWN && !(fluid.isIn(FluidTags.WATER) && fluid.isIn(ModTags.GEDRITED_WATER));
     }
 
     @Override
     public int getTickRate(WorldView world) {
-        return 5;
+        return 20;
     }
 
     @Override

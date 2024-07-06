@@ -1,9 +1,13 @@
 package com.gedrite;
 
 import com.gedrite.blocks.ModBlocks;
+import com.gedrite.blocks.cauldron.ModCauldronBehavior;
+import com.gedrite.blocks.dispenser.ModDispenserBehavior;
+import com.gedrite.effects.ModEffects;
 import com.gedrite.fluids.ModFluids;
 import com.gedrite.items.ModItemGroups;
 import com.gedrite.items.ModItems;
+import com.gedrite.particles.ModParticleTypes;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
@@ -29,17 +33,21 @@ public class Gedrite implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, GEDRITE_ORE_PLACED_KEY);
+		ModParticleTypes.register();
+		ModEffects.registerEffects();
+		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
-		ModItemGroups.registerItemGroups();
-		FuelRegistry.INSTANCE.add(ModItems.GEDRITED_COAL, 3200);
 		ModFluids.register();
+		ModCauldronBehavior.registerBehavior();
+		ModDispenserBehavior.registerDefaults();
+		FuelRegistry.INSTANCE.add(ModItems.GEDRITED_COAL, 3200);
 
 		FluidRenderHandlerRegistry.INSTANCE.register(ModFluids.GEDRITED_WATER, ModFluids.FLOWING_GEDRITED_WATER,
 				new SimpleFluidRenderHandler(
 						new Identifier("gedrite:block/gedrited_water_still"),
 						new Identifier("gedrite:block/gedrited_water_flow"),
-						0xFF31DF
+						0xf722d7
 				));
 
 		BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(),

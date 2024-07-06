@@ -20,7 +20,7 @@
 			"com.gedrite.Gedrite"
 		],
 		"client": [
-
+			"com.gedrite.GedriteClient"
 		],
 		"fabric-datagen": [
 			"com.gedrite.GedriteDataGenerator"

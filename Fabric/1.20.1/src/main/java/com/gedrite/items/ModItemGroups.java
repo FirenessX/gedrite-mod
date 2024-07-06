@@ -2,6 +2,7 @@ package com.gedrite.items;
 
 import com.gedrite.Gedrite;
 import com.gedrite.blocks.ModBlocks;
+import com.gedrite.fluids.ModFluids;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
@@ -19,6 +20,7 @@ public class ModItemGroups {
                 entries.add(ModItems.RAW_GEDRITE);
                 entries.add(ModItems.GEDRITED_COAL);
                 entries.add(ModItems.METAL_DETECTOR);
+                entries.add(ModFluids.GEDRITED_WATER_BUCKET);
                 entries.add(ModBlocks.GEDRITE_BLOCK);
                 entries.add(ModBlocks.RAW_GEDRITE_BLOCK);
                 entries.add(ModBlocks.GEDRITE_ORE);

@@ -1,13 +1,12 @@
 package com.gedrite.items;
 
 import com.gedrite.Gedrite;
+import com.gedrite.fluids.ModFluids;
 import com.gedrite.items.custom.MetalDetectorItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemGroups;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -42,6 +41,7 @@ public class ModItems {
 
     private static void addItemsToToolsTabItemGroup(FabricItemGroupEntries entries){
         entries.add(METAL_DETECTOR);
+        entries.add(ModFluids.GEDRITED_WATER_BUCKET);
     }
 
     private static void addItemsToFoodTabItemGroup(FabricItemGroupEntries entries){

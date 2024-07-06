@@ -31,9 +31,14 @@ public class ModTags {
     }
 
     //////////  Gedirted Water
-    public static final TagKey<Fluid> GEDRITED_WATER = ModTags.of("gedrited_water.json");
+    public static final TagKey<Fluid> GEDRITED_WATER = ModTags.of("gedrited_water");
     //////////
     private static TagKey<Fluid> of(String id) {
         return TagKey.of(RegistryKeys.FLUID, new Identifier(id));
     }
+    // В вашем классе ModTags добавьте этот метод
+    public static boolean isSpecificFluid(Fluid fluid, TagKey<Fluid> tag) {
+        return fluid.isIn(tag);
+    }
+
 }
