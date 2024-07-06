@@ -26,5 +26,9 @@
 
 ![Gedrite Blocks](https://i.imgur.com/d7TMFJj.png)
 
-## Recipes
+## Fluids:
++ ![Gedrited Water](https://i.imgur.com/A1Bdz4Z.png) Gedrited Water
+  + **Gedrited Water** is a deadly liquid that gives **Decay** effect to any **living creature.**
+
+## Recipes:
 ![Gedrite Crafts](https://i.imgur.com/pdSKkHZ.png)
