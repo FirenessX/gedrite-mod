@@ -31,7 +31,7 @@
   + **Gedrited Water** is a deadly liquid that gives **Decay** effect to any **living creature.**
  
 ## Effects:
-+ ![Decay](https://i.imgur.com/4TbCJGi.png) Decay
++ ![Decay](https://i.imgur.com/PUioi3l.png) Decay
   + Functionality of **Decay** effect: With each tick, with a 20% chance, the effect deals damage from 2 to 8 units (from 1 to 4 hearts). It all depends on the random.
 
 ## Recipes:
