@@ -21,7 +21,7 @@
 + Gedrite Ore
 + Deepslate Gedrite Ore
 + Raw Gedrite Block
-+ ![Gedrite Block](https://imgur.com/h54qh5V) Gedrite Block
++ ![Gedrite Block](https://i.imgur.com/h54qh5V.png) Gedrite Block
 
 ![Gedrite Blocks](https://i.imgur.com/d7TMFJj.png)
 
