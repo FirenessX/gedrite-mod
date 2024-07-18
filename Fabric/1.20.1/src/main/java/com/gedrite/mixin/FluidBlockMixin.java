@@ -40,13 +40,13 @@ public class FluidBlockMixin {
         if (fluidState.isIn(FluidTags.LAVA)) {          /// LAVA
             for (Direction direction : FluidBlock.FLOW_DIRECTIONS) {
                 BlockPos blockPos = pos.offset(direction.getOpposite());
-                if (!world.getFluidState(blockPos).isIn(ModTags.GEDRITED_WATER) && world.getFluidState(blockPos).isIn(FluidTags.WATER)) {
+                if (!world.getFluidState(blockPos).isIn(ModTags.Fluids.GEDRITED_WATER) && world.getFluidState(blockPos).isIn(FluidTags.WATER)) {
                     Block block = fluidState.isStill() ? Blocks.OBSIDIAN : Blocks.COBBLESTONE;
                     world.setBlockState(pos, block.getDefaultState());
                     this.playExtinguishSound(world, pos);
                     cir.setReturnValue(false);
                 }
-                if (world.getFluidState(blockPos).isIn(ModTags.GEDRITED_WATER)) {
+                if (world.getFluidState(blockPos).isIn(ModTags.Fluids.GEDRITED_WATER)) {
                     Block block = fluidState.isStill() ? Blocks.OBSIDIAN : Blocks.SOUL_SAND;
                     world.setBlockState(pos, block.getDefaultState());
                     this.playExtinguishSound(world, pos);
@@ -58,7 +58,7 @@ public class FluidBlockMixin {
                 cir.setReturnValue(false);
             }
         }
-        if (!fluidState.isIn(ModTags.GEDRITED_WATER) && fluidState.isIn(FluidTags.WATER)) {           /// WATER
+        if (!fluidState.isIn(ModTags.Fluids.GEDRITED_WATER) && fluidState.isIn(FluidTags.WATER)) {           /// WATER
             for (Direction direction : FluidBlock.FLOW_DIRECTIONS) {
                 BlockPos blockPos = pos.offset(direction.getOpposite());
                 if (!world.getBlockState(blockPos).isOf(ModBlocks.GEDRITE_BLOCK)) continue;
@@ -71,12 +71,11 @@ public class FluidBlockMixin {
                 }
             }
         }
-        if (fluidState.isIn(ModTags.GEDRITED_WATER) && fluidState.isIn(FluidTags.WATER)) {          /// GEDRITED WATER
+        if (fluidState.isIn(ModTags.Fluids.GEDRITED_WATER) && fluidState.isIn(FluidTags.WATER)) {          /// GEDRITED WATER
             for (Direction direction : FluidBlock.FLOW_DIRECTIONS) {
                 BlockPos blockPos = pos.offset(direction.getOpposite());
-                if (!world.getFluidState(blockPos).isIn(ModTags.GEDRITED_WATER) && world.getFluidState(blockPos).isIn(FluidTags.WATER)) {
-                    Block block = Blocks.COARSE_DIRT;
-                    world.setBlockState(pos, block.getDefaultState());
+                if (!world.getFluidState(blockPos).isIn(ModTags.Fluids.GEDRITED_WATER) && world.getFluidState(blockPos).isIn(FluidTags.WATER)) {
+                    world.setBlockState(pos, Blocks.COARSE_DIRT.getDefaultState());
                     this.playSplashSound(world, pos);
                     cir.setReturnValue(false);
                 }
@@ -91,7 +90,7 @@ public class FluidBlockMixin {
 //                for (int z = -1; z <= 1; z++) {
 //                    int distanceSq = (x * x) + (y * y) + (z * z);
 //                    BlockPos currentPos = centerPos.add(x, y, z);
-//                    if (world.getFluidState(currentPos).isIn(FluidTags.WATER) && !world.getFluidState(currentPos).isIn(ModTags.GEDRITED_WATER)) {
+//                    if (world.getFluidState(currentPos).isIn(FluidTags.WATER) && !world.getFluidState(currentPos).isIn(ModTags.Fluids.GEDRITED_WATER)) {
 //                        if (distanceSq <= 1) {
 //                            world.setBlockState(currentPos, ModFluids.GEDRITED_WATER_BLOCK.getDefaultState());
 //                        }

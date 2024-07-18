@@ -13,6 +13,8 @@
 
   "effect.gedrite.decay": "Разложение",
 
+  "death.attack.decay": "%1$s сгнил заживо",
+
   "itemgroup.gedrite": "Гедрит",
 
   "tooltip.gedrite.metal_detector.tooltip": "Находит металлы в сфере с радиусом 8 блоков",

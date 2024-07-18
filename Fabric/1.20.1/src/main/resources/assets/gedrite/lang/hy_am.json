@@ -13,9 +13,11 @@
 
   "effect.gedrite.decay": "Փտում",
 
+  "death.attack.decay": "%1$s ողջ-ողջ փտել է",
+
   "itemgroup.gedrite": "Գեդրիտ",
 
-  "tooltip.gedrite.metal_detector.tooltip": "Փնտրում է մետաղ 8 բլոկ շառավղով տարածքի (գնդի) մեջ։",
+  "tooltip.gedrite.metal_detector.tooltip": "Փնտրում է մետաղ 8 բլոկ շառավղով տարածքի (սֆերայի) մեջ։",
   "gedrite.metal_detector.foundBlock": "Հաջողված․ ",
-  "gedrite.metal_detector.dontFoundBlock": "ՍԽԱԼ: Փործեք փնտրել ուրիշ տեղ։"
+  "gedrite.metal_detector.dontFoundBlock": "ՍԽԱԼ: Փորձեք փնտրել ուրիշ տեղ։"
 }

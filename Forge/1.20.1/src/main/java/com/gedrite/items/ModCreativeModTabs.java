@@ -22,6 +22,7 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.RAW_GEDRITE.get());
                         pOutput.accept(ModItems.GEDRITED_COAL.get());
                         pOutput.accept(ModItems.METAL_DETECTOR.get());
+                        pOutput.accept(ModItems.GEDRITED_WATER_BUCKET.get());
 
                         pOutput.accept(ModBlocks.GEDRITE_BLOCK.get());
                         pOutput.accept(ModBlocks.RAW_GEDRITE_BLOCK.get());

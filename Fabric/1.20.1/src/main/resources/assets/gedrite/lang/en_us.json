@@ -13,6 +13,8 @@
 
   "effect.gedrite.decay": "Decay",
 
+  "death.attack.decay": "%1$s decayed alive",
+
   "itemgroup.gedrite": "Gedrite",
 
   "tooltip.gedrite.metal_detector.tooltip": "Finds metals in a sphere with a radius of 8 blocks",

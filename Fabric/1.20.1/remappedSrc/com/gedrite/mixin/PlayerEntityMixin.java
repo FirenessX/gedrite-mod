@@ -15,13 +15,12 @@ public class PlayerEntityMixin {
     @Inject(method = "updateSwimming", at = @At("HEAD"), cancellable = true)
     private void gedrite$updateSwimming(CallbackInfo ci) {
         PlayerEntity player = (PlayerEntity) (Object) this;
-        World world = player.getWorld();
+        World world = player.method_48926();
         BlockPos pos = player.getBlockPos();
         FluidState fluidState = world.getFluidState(pos);
 
         if (fluidState.getFluid() == ModFluids.GEDRITED_WATER || fluidState.getFluid() == ModFluids.FLOWING_GEDRITED_WATER) {
             player.setSwimming(false);
-            player.setSprinting(false);
             ci.cancel();
         }
     }

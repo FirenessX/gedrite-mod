@@ -3,10 +3,12 @@ package com.gedrite.util;
 import com.gedrite.Gedrite;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.FluidTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.material.Fluid;
 
 public class ModTags {
     public static class Blocks{
@@ -28,4 +30,20 @@ public class ModTags {
             return ItemTags.create(new ResourceLocation(Gedrite.MOD_ID, name));
         }
     }
+
+    public static class Fluids{
+        public static final TagKey<Fluid> GEDRITED_WATER =
+                createTag("gedrited_water");
+
+        private static TagKey<Fluid> createTag(String name) {
+            return FluidTags.create(new ResourceLocation(Gedrite.MOD_ID, name));
+        }
+    }
+
+//    //////////  Gedirted Water
+//    public static final TagKey<Fluid> GEDRITED_WATER = ModTags.of("gedrited_water");
+//    //////////
+//    private static TagKey<Fluid> of(String id) {
+//        return FluidTags.create(new ResourceLocation(id));
+//    }
 }

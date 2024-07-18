@@ -68,7 +68,7 @@ public class GedritedWaterFluid extends FlowableFluid {
     protected void flow(WorldAccess world, BlockPos pos, BlockState state, Direction direction, FluidState fluidState) {
         if (direction == Direction.DOWN) {
             FluidState fluidState2 = world.getFluidState(pos);
-            if (this.isIn(ModTags.GEDRITED_WATER) && (fluidState2.isIn(FluidTags.WATER) && !fluidState2.isIn(ModTags.GEDRITED_WATER))) {
+            if (this.isIn(ModTags.Fluids.GEDRITED_WATER) && (fluidState2.isIn(FluidTags.WATER) && !fluidState2.isIn(ModTags.Fluids.GEDRITED_WATER))) {
                 if (state.getBlock() instanceof FluidBlock) {
                     world.setBlockState(pos, Blocks.COARSE_DIRT.getDefaultState(), Block.NOTIFY_ALL);
                 }
@@ -103,7 +103,7 @@ public class GedritedWaterFluid extends FlowableFluid {
 
     @Override
     protected boolean canBeReplacedWith(FluidState state, BlockView world, BlockPos pos, Fluid fluid, Direction direction) {
-        return direction == Direction.DOWN && !(fluid.isIn(FluidTags.WATER) && fluid.isIn(ModTags.GEDRITED_WATER));
+        return direction == Direction.DOWN && fluid.isIn(ModTags.Fluids.GEDRITED_WATER);
     }
 
     @Override
@@ -118,7 +118,7 @@ public class GedritedWaterFluid extends FlowableFluid {
 
     @Override
     protected BlockState toBlockState(FluidState state) {
-        return (BlockState)ModFluids.GEDRITED_WATER_BLOCK.getDefaultState().with(Properties.LEVEL_15, getBlockStateLevel(state));
+        return ModFluids.GEDRITED_WATER_BLOCK.getDefaultState().with(Properties.LEVEL_15, getBlockStateLevel(state));
     }
 
     @Override

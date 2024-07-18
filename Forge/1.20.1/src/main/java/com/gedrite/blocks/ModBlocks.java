@@ -2,6 +2,8 @@ package com.gedrite.blocks;
 
 
 import com.gedrite.Gedrite;
+import com.gedrite.blocks.custom.GedritedWaterCauldronBlock;
+import com.gedrite.fluids.ModFluids;
 import com.gedrite.items.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -27,8 +29,17 @@ public class ModBlocks {
     public static final RegistryObject<Block> GEDRITE_ORE = registerBlock("gedrite_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.IRON_ORE)));
 
-     public static final RegistryObject<Block> DEEPSLATE_GEDRITE_ORE = registerBlock("deepslate_gedrite_ore",
+    public static final RegistryObject<Block> DEEPSLATE_GEDRITE_ORE = registerBlock("deepslate_gedrite_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE_IRON_ORE)));
+
+    public static final RegistryObject<LiquidBlock> GEDRITED_WATER_BLOCK = registerBlock("gedrited_water_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_GEDRITED_WATER, BlockBehaviour.Properties.copy(Blocks.WATER)));
+
+    public static final RegistryObject<LiquidBlock> TEST_FLUID_BLOCK = registerBlock("test_fluid_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_TEST, BlockBehaviour.Properties.copy(Blocks.WATER)));
+
+    public static final RegistryObject<Block> GEDRITED_WATER_CAULDRON = registerBlock("gedrited_water_cauldron",
+            () -> new GedritedWaterCauldronBlock(BlockBehaviour.Properties.copy(Blocks.CAULDRON)));
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
