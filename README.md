@@ -28,7 +28,7 @@
 
 ## Fluids:
 + ![Gedrited Water](https://i.imgur.com/A1Bdz4Z.png) Gedrited Water
-  + **Gedrited Water** is a deadly liquid that gives **Decay** effect to any **living creature.** The only way to get this fluid - place **water** next to **Gedrite Block** 
+  + **Gedrited Water** is a deadly liquid that gives **Decay** effect to any **living creature.** The only way to get this fluid - place **water** next to ![Gedrite Block](https://i.imgur.com/h54qh5V.png) **Gedrite Block** 
  
 ## Effects:
 + ![Decay](https://i.imgur.com/PUioi3l.png) Decay
