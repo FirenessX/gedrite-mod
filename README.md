@@ -32,7 +32,7 @@
  
 ## Effects:
 + ![Decay](https://i.imgur.com/PUioi3l.png) Decay
-  + Functionality of **Decay** effect: With each tick, with a 20% chance, the effect deals damage from 2 to 8 units (from 1 to 4 hearts). It all depends on the random.
+  + Functionality of **Decay** effect: With each tick, with a 20% chance, the effect deals damage from 1 to 4 units (from 0.5 to 2 hearts). It all depends on the random.
 
 ## Recipes:
 ![Gedrite Crafts](https://i.imgur.com/pdSKkHZ.png)
