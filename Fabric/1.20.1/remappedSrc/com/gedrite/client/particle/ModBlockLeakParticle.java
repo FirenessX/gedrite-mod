@@ -13,9 +13,9 @@ import net.minecraft.client.world.ClientWorld;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.particle.DefaultParticleType;
 import net.minecraft.particle.ParticleEffect;
 import net.minecraft.particle.ParticleTypes;
+import net.minecraft.particle.SimpleParticleType;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
@@ -33,7 +33,7 @@ public abstract class ModBlockLeakParticle extends SpriteBillboardParticle {
         this.fluid = fluid;
     }
 
-    public static SpriteBillboardParticle createDrippingGedritedWater(DefaultParticleType type, ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ, SpriteProvider spriteProvider) {
+    public static SpriteBillboardParticle createDrippingGedritedWater(SimpleParticleType type, ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ, SpriteProvider spriteProvider) {
         BlockPos pos = new BlockPos((int) x, (int) y, (int) z);
 //        if (!world.getFluidState(pos.down()).isIn(ModTags.Fluids.GEDRITED_WATER)) {
             Dripping particle = new Dripping(world, x, y, z, ModFluids.GEDRITED_WATER, ModParticleTypes.FALLING_GEDRITED_WATER, spriteProvider);
@@ -44,14 +44,14 @@ public abstract class ModBlockLeakParticle extends SpriteBillboardParticle {
 //        return null;
     }
 
-    public static SpriteBillboardParticle createFallingGedritedWater(DefaultParticleType type, ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ, SpriteProvider spriteProvider) {
+    public static SpriteBillboardParticle createFallingGedritedWater(SimpleParticleType type, ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ, SpriteProvider spriteProvider) {
         ContinuousFalling particle = new ContinuousFalling(world, x, y, z, ModFluids.GEDRITED_WATER, ModParticleTypes.LANDING_GEDRITED_WATER, spriteProvider);
         particle.setColor((float) 135/255, (float) 34/255, (float) 102/255);
         particle.setSprite(spriteProvider);
         return particle;
     }
 
-    public static SpriteBillboardParticle createLandingGedritedWater(DefaultParticleType type, ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ, SpriteProvider spriteProvider) {
+    public static SpriteBillboardParticle createLandingGedritedWater(SimpleParticleType type, ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ, SpriteProvider spriteProvider) {
         Landing particle = new Landing(world, x, y, z, ModFluids.GEDRITED_WATER, spriteProvider);
         particle.setColor((float) 135/255, (float) 34/255, (float) 102/255);
         particle.setSprite(spriteProvider);

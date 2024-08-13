@@ -2,11 +2,11 @@ package com.gedrite.mixin;
 
 import com.gedrite.fluids.ModFluids;
 import com.mojang.blaze3d.systems.RenderSystem;
+import net.minecraft.block.enums.CameraSubmersionType;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.client.render.BackgroundRenderer.FogType;
 import net.minecraft.client.render.Camera;
-import net.minecraft.client.render.CameraSubmersionType;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.fluid.FluidState;
 import org.spongepowered.asm.mixin.Mixin;

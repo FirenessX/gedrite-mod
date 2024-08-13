@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.7,
+  "group": "gedrite_ingot",
+  "ingredient": {
+    "item": "gedrite:gedrite_ore"
+  },
+  "result": {
+    "id": "gedrite:gedrite_block",
+    "count": 1
+  }
+}

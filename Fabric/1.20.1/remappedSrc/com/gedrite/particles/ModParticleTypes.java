@@ -1,15 +1,15 @@
 package com.gedrite.particles;
 
 import net.fabricmc.fabric.api.particle.v1.FabricParticleTypes;
-import net.minecraft.particle.DefaultParticleType;
+import net.minecraft.particle.SimpleParticleType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModParticleTypes {
-    public static final DefaultParticleType LANDING_GEDRITED_WATER = FabricParticleTypes.simple();
-    public static final DefaultParticleType DRIPPING_GEDRITED_WATER = FabricParticleTypes.simple();
-    public static final DefaultParticleType FALLING_GEDRITED_WATER = FabricParticleTypes.simple();
+    public static final SimpleParticleType LANDING_GEDRITED_WATER = FabricParticleTypes.simple();
+    public static final SimpleParticleType DRIPPING_GEDRITED_WATER = FabricParticleTypes.simple();
+    public static final SimpleParticleType FALLING_GEDRITED_WATER = FabricParticleTypes.simple();
 //    public static final DefaultParticleType DRIPPING_DRIPSTONE_GEDRITED_WATER = FabricParticleTypes.simple();
 //    public static final DefaultParticleType FALLING_DRIPSTONE_GEDRITED_WATER = FabricParticleTypes.simple();
 

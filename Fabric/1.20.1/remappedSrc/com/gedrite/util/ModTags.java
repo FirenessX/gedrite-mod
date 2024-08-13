@@ -9,18 +9,18 @@ import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 
 public class ModTags {
-    public static class Blocks{
+    public static class Blocks {
         public static final TagKey<Block> BLOCKS_WITH_GEDRITE =
                 createTag("blocks_with_gedrite");
+        public static final TagKey<Block> METAL_BLOCKS_FOR_MD =
+                createTag("metal_blocks_for_md");
 
         private static TagKey<Block> createTag(String name){
             return TagKey.of(RegistryKeys.BLOCK, new Identifier(Gedrite.MOD_ID, name));
         }
-        public static final TagKey<Block> METAL_BLOCKS_FOR_MD =
-                createTag("metal_blocks_for_md");
     }
 
-    public static class Items{
+    public static class Items {
         public static final TagKey<Item> GEDRITE_ITEMS =
                 createTag("gedrite_items");
 
@@ -30,15 +30,19 @@ public class ModTags {
 
     }
 
-    //////////  Gedirted Water
-    public static final TagKey<Fluid> GEDRITED_WATER = ModTags.of("gedrited_water");
-    //////////
-    private static TagKey<Fluid> of(String id) {
-        return TagKey.of(RegistryKeys.FLUID, new Identifier(id));
-    }
-    // В вашем классе ModTags добавьте этот метод
-    public static boolean isSpecificFluid(Fluid fluid, TagKey<Fluid> tag) {
-        return fluid.isIn(tag);
-    }
+    public static class Fluids {
+        public static final TagKey<Fluid> GEDRITED_WATER =
+                createTag("gedrited_water");
 
+        private static TagKey<Fluid> createTag(String name){
+            return TagKey.of(RegistryKeys.FLUID, new Identifier(Gedrite.MOD_ID, name));
+        }
+    }
+//
+//    //////////  Gedirted Water
+//    public static final TagKey<Fluid> GEDRITED_WATER = ModTags.of("gedrited_water");
+//    //////////
+//    private static TagKey<Fluid> of(String id) {
+//        return TagKey.of(RegistryKeys.FLUID, new Identifier(id));
+//    }
 }

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "c c",
+    "###",
+    "c c"
+  ],
+  "key": {
+    "c": {
+      "item": "gedrite:gedrite_ingot"
+    },
+    "#": {
+      "item": "minecraft:coal"
+    }
+  },
+  "result": {
+    "id": "gedrite:gedrited_coal",
+    "count": 2
+  }
+}

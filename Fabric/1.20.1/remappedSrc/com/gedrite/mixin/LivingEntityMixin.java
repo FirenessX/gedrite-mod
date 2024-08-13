@@ -4,7 +4,6 @@ import com.gedrite.effects.ModEffects;
 import com.gedrite.fluids.ModFluids;
 import com.gedrite.util.ModTags;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.client.render.CameraSubmersionType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
@@ -40,7 +39,7 @@ public class LivingEntityMixin {
     @Inject(method = "travel", at = @At("HEAD"))
     private void onTravel(Vec3d movementInput, CallbackInfo ci) {
         LivingEntity entity = (LivingEntity) (Object) this;
-        
+
         if (entity.isLogicalSideForUpdatingMovement()){
             boolean bl;
             double d = 0.08;
@@ -50,9 +49,13 @@ public class LivingEntityMixin {
             }
 
             BlockPos pos = entity.getBlockPos();
-            FluidState fluidState = entity.method_48926().getFluidState(pos);
+            FluidState fluidState = entity.getWorld().getFluidState(pos);
 
-            if ((fluidState.getFluid() == ModFluids.GEDRITED_WATER || fluidState.getFluid() == ModFluids.FLOWING_GEDRITED_WATER) && !entity.canWalkOnFluid(fluidState)) {
+            if ((fluidState.getFluid() == ModFluids.GEDRITED_WATER ||
+                    fluidState.getFluid() == ModFluids.FLOWING_GEDRITED_WATER) &&
+                    !entity.canWalkOnFluid(fluidState) &&
+                    !(entity instanceof PlayerEntity player && player.getAbilities().flying))
+            {
                 Vec3d vec3d;
                 double e = entity.getY();
 
