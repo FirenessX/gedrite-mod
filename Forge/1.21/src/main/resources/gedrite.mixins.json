@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.gedrite.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "mixins.gedrite.refmap.json",
+  "mixins": [
+    "EntityMixin",
+    "LivingEntityMixin",
+    "WaterFluidMixin",
+    "LavaFluidMixin",
+    "FishingHookMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

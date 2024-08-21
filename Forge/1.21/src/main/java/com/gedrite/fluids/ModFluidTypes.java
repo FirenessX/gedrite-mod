@@ -13,9 +13,9 @@ import net.minecraftforge.registries.RegistryObject;
 import org.joml.Vector3f;
 
 public class ModFluidTypes {
-    public static final ResourceLocation GEDRITED_WATER_STILL_RL = new ResourceLocation(Gedrite.MOD_ID, "block/gedrited_water_still");
-    public static final ResourceLocation GEDRITED_WATER_FLOWING_RL = new ResourceLocation(Gedrite.MOD_ID, "block/gedrited_water_flow");
-    public static final ResourceLocation GEDRITED_WATER_OVERLAY_RL = new ResourceLocation(Gedrite.MOD_ID, "misc/in_gedrited_water");
+    public static final ResourceLocation GEDRITED_WATER_STILL_RL = ResourceLocation.fromNamespaceAndPath(Gedrite.MOD_ID, "block/gedrited_water_still");
+    public static final ResourceLocation GEDRITED_WATER_FLOWING_RL = ResourceLocation.fromNamespaceAndPath(Gedrite.MOD_ID, "block/gedrited_water_flow");
+    public static final ResourceLocation GEDRITED_WATER_OVERLAY_RL = ResourceLocation.fromNamespaceAndPath(Gedrite.MOD_ID, "misc/in_gedrited_water");
 
     public static final DeferredRegister<FluidType> FLUID_TYPES = DeferredRegister.create(ForgeRegistries.Keys.FLUID_TYPES, Gedrite.MOD_ID);
 
@@ -23,8 +23,8 @@ public class ModFluidTypes {
             FluidType.Properties.create()
                     .canSwim(false)
                     .canDrown(false)
+                    .motionScale(0.003)
                     .supportsBoating(false)
-                    .motionScale(0.003D)
                     .sound(SoundActions.BUCKET_FILL, SoundEvents.BUCKET_FILL)
                     .sound(SoundActions.BUCKET_EMPTY, SoundEvents.BUCKET_EMPTY)
                     .sound(SoundActions.FLUID_VAPORIZE, SoundEvents.FIRE_EXTINGUISH)
