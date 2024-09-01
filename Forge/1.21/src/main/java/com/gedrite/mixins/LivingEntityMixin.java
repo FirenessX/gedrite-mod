@@ -41,7 +41,7 @@ public class LivingEntityMixin {
                         livingEntity.addEffect(new MobEffectInstance(ModEffects.DECAY.getHolder().get(), 60, 0, false, false, true));
                     }
                 } else {
-                    livingEntity.removeEffect(ModEffects.DECAY.getHolder().get());
+//                    livingEntity.removeEffect(ModEffects.DECAY.getHolder().get());
                 }
             }
         }

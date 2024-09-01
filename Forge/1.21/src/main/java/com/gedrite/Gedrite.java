@@ -9,6 +9,7 @@ import com.gedrite.event.ModEventBusEvents;
 import com.gedrite.fluids.ModFluidTypes;
 import com.gedrite.fluids.ModFluids;
 import com.gedrite.items.ModCreativeModTabs;
+import com.gedrite.items.ModFoods;
 import com.gedrite.items.ModItems;
 import com.gedrite.world.effects.ModEffects;
 import com.mojang.logging.LogUtils;

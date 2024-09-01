@@ -1,17 +1,18 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "building",
+  "key": {
+    "#": {
+      "item": "gedrite:gedrite_ingot"
+    }
+  },
   "pattern": [
     "###",
     "###",
     "###"
   ],
-  "key": {
-    "#": {
-      "item": "gedrite:raw_gedrite"
-    }
-  },
   "result": {
-    "item": "gedrite:raw_gedrite_block"
+    "id": "gedrite:gedrite_block",
+    "count": 1
   }
 }

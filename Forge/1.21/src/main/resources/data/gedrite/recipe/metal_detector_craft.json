@@ -21,6 +21,7 @@
     }
   },
   "result": {
-    "item": "gedrite:metal_detector"
+    "id": "gedrite:metal_detector",
+    "count": 1
   }
 }

@@ -1,17 +1,31 @@
-[19рту.2024 02:47:01.025] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_data, --assetIndex, 17, --assetsDir, C:\Users\User\.gradle\caches\forge_gradle\assets, --gameDir, ., --mod, gedrite, --all, --output, C:\Users\User\IdeaProjects\gedrite-mod\Forge\1.21\src\generated\resources, --existing, C:\Users\User\IdeaProjects\gedrite-mod\Forge\1.21\src\main\resources]
-[19рту.2024 02:47:01.030] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 21.0.3+7-LTS-152
-[19рту.2024 02:47:01.033] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.2.1 starting: java version 21.0.3 by Oracle Corporation; OS Windows 10 arch amd64 version 10.0
-[19рту.2024 02:47:01.258] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_data
-[19рту.2024 02:47:01.503] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/User/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=UNKNOWN
-[19рту.2024 02:47:03.573] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[19рту.2024 02:47:04.862] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_data' with arguments [--gameDir, ., --assetsDir, C:\Users\User\.gradle\caches\forge_gradle\assets, --assetIndex, 17, --mod, gedrite, --all, --output, C:\Users\User\IdeaProjects\gedrite-mod\Forge\1.21\src\generated\resources, --existing, C:\Users\User\IdeaProjects\gedrite-mod\Forge\1.21\src\main\resources]
-[19рту.2024 02:47:14.931] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 51.0.33, for MC 1.21 with MCP 20240613.102039
-[19рту.2024 02:47:14.931] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v51.0.33 Initialized
-[19рту.2024 02:47:14.966] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
-[19рту.2024 02:47:16.133] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [gedrite]
-[19рту.2024 02:47:16.273] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/User/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_official_1.21/forge-1.21-51.0.33_mapped_official_1.21.jar%230!/assets/.mcassetsroot' uses unexpected schema
-[19рту.2024 02:47:16.274] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/User/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_official_1.21/forge-1.21-51.0.33_mapped_official_1.21.jar%230!/data/.mcassetsroot' uses unexpected schema
-[19рту.2024 02:47:16.473] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
-[19рту.2024 02:47:17.144] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 670 ms
-[19рту.2024 02:47:17.145] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 673 ms
-[19рту.2024 02:47:17.169] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 36, old count: 0, new count: 13, removed stale: 24, written: 12
+[24рту.2024 17:53:46.690] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_data, --assetIndex, 17, --assetsDir, C:\Users\User\.gradle\caches\forge_gradle\assets, --gameDir, ., --mod, gedrite, --all, --output, C:\Users\User\IdeaProjects\gedrite-mod\Forge\1.21\src\generated\resources, --existing, C:\Users\User\IdeaProjects\gedrite-mod\Forge\1.21\src\main\resources, --mixin.config, gedrite.mixins.json]
+[24рту.2024 17:53:46.748] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 21.0.3+7-LTS-152
+[24рту.2024 17:53:46.756] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.2.1 starting: java version 21.0.3 by Oracle Corporation; OS Windows 10 arch amd64 version 10.0
+[24рту.2024 17:53:47.095] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_data
+[24рту.2024 17:53:47.396] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/User/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=UNKNOWN
+[24рту.2024 17:53:50.119] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[24рту.2024 17:53:51.984] [main/WARN] [mixin/]: Compatibility level JAVA_17 specified by gedrite.mixins.json is higher than the maximum level supported by this version of mixin (JAVA_13).
+[24рту.2024 17:53:51.985] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[24рту.2024 17:53:51.993] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_data' with arguments [--gameDir, ., --assetsDir, C:\Users\User\.gradle\caches\forge_gradle\assets, --assetIndex, 17, --mod, gedrite, --all, --output, C:\Users\User\IdeaProjects\gedrite-mod\Forge\1.21\src\generated\resources, --existing, C:\Users\User\IdeaProjects\gedrite-mod\Forge\1.21\src\main\resources]
+[24рту.2024 17:53:52.071] [main/INFO] [mixin/]: Attempting to load Fernflower decompiler (Threaded mode)
+[24рту.2024 17:53:52.076] [main/INFO] [mixin/]: Fernflower could not be loaded, exported classes will not be decompiled. NoClassDefFoundError: org/jetbrains/java/decompiler/main/extern/IResultSaver
+[24рту.2024 17:53:52.081] [main/INFO] [mixin/]: Preparing mixins for MixinEnvironment[DEFAULT]
+[24рту.2024 17:53:52.083] [main/INFO] [mixin/]: Selecting config gedrite.mixins.json
+[24рту.2024 17:53:52.091] [main/WARN] [mixin/]: Reference map 'mixins.gedrite.refmap.json' for gedrite.mixins.json could not be read. If this is a development environment you can ignore this message
+[24рту.2024 17:53:52.093] [main/INFO] [mixin/]: Preparing gedrite.mixins.json (5)
+[24рту.2024 17:53:52.299] [main/WARN] [mixin/]: Mixin environment was unable to detect the current side, sided mixins will not be applied
+[24рту.2024 17:53:52.424] [main/INFO] [mixin/]: Prepared 5 mixins in 0,336 sec (67,2ms avg) (0ms load, 0ms transform, 0ms plugin)
+[24рту.2024 17:53:53.743] [main/INFO] [mixin/]: Mixing EntityMixin from gedrite.mixins.json into net.minecraft.world.entity.Entity
+[24рту.2024 17:53:53.756] [main/WARN] [mixin/]: gedrite.mixins.json:EntityMixin: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
+[24рту.2024 17:53:54.024] [main/INFO] [mixin/]: Mixing LivingEntityMixin from gedrite.mixins.json into net.minecraft.world.entity.LivingEntity
+[24рту.2024 17:53:54.026] [main/INFO] [mixin/]: Renaming synthetic method lambda$gedrite$baseTick$0(Lnet/minecraft/world/level/material/FluidState;)Z to md1b67d6$lambda$gedrite$baseTick$0$0 in gedrite.mixins.json:LivingEntityMixin
+[24рту.2024 17:53:56.679] [main/INFO] [mixin/]: Mixing WaterFluidMixin from gedrite.mixins.json into net.minecraft.world.level.material.WaterFluid
+[24рту.2024 17:53:56.712] [main/INFO] [mixin/]: Mixing LavaFluidMixin from gedrite.mixins.json into net.minecraft.world.level.material.LavaFluid
+[24рту.2024 17:54:03.412] [main/INFO] [mixin/]: Mixing FishingHookMixin from gedrite.mixins.json into net.minecraft.world.entity.projectile.FishingHook
+[24рту.2024 17:54:06.689] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 51.0.33, for MC 1.21 with MCP 20240613.102039
+[24рту.2024 17:54:06.689] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v51.0.33 Initialized
+[24рту.2024 17:54:06.730] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
+[24рту.2024 17:54:08.575] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [gedrite]
+[24рту.2024 17:54:08.708] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/User/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_official_1.21/forge-1.21-51.0.33_mapped_official_1.21.jar%230!/assets/.mcassetsroot' uses unexpected schema
+[24рту.2024 17:54:08.709] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/User/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.21-51.0.33_mapped_official_1.21/forge-1.21-51.0.33_mapped_official_1.21.jar%230!/data/.mcassetsroot' uses unexpected schema
+[24рту.2024 17:54:09.006] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables

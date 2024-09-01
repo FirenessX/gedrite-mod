@@ -5,6 +5,7 @@ import com.gedrite.Gedrite;
 import com.gedrite.fluids.ModFluids;
 import com.gedrite.items.custom.FuelItem;
 import com.gedrite.items.custom.MetalDetectorItem;
+import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -18,7 +19,7 @@ public class ModItems {
         DeferredRegister.create(ForgeRegistries.ITEMS, Gedrite.MOD_ID);
 
     public static final RegistryObject<Item> GEDRITE_INGOT = ITEMS.register("gedrite_ingot",
-            () -> new Item(new Item.Properties().food(ModFoods.GEDRITE_INGOT)));
+            () -> new Item((new Item.Properties()).food(ModFoods.GEDRITE_INGOT)));
 
     public static final RegistryObject<Item> RAW_GEDRITE = ITEMS.register("raw_gedrite",
            () -> new Item(new Item.Properties()));

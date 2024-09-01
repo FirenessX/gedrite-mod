@@ -4,6 +4,7 @@
     "gedrite:gedrite_block",
     "gedrite:raw_gedrite_block",
     "gedrite:gedrite_ore",
-    "gedrite:deepslate_gedrite_ore"
+    "gedrite:deepslate_gedrite_ore",
+    "gedrite:gedrited_water_cauldron"
   ]
 }

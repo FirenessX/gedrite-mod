@@ -8,10 +8,11 @@
   ],
   "key": {
     "#": {
-      "item": "gedrite:gedrite_ingot"
+      "item": "gedrite:raw_gedrite"
     }
   },
   "result": {
-    "item": "gedrite:gedrite_block"
+    "id": "gedrite:raw_gedrite_block",
+    "count": 1
   }
 }

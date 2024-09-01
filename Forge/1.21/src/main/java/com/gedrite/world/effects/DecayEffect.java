@@ -21,7 +21,7 @@ public class DecayEffect extends MobEffect {
         Level world = entity.getCommandSenderWorld();
         if (!entity.getCommandSenderWorld().isClientSide()) {
             if(random.nextFloat() < 0.2f) {
-                System.out.println("decay");
+//                System.out.println("decay");
                 entity.hurt(ModDamageTypes.of(world, DamageTypes.GENERIC), (float) (random.nextInt(4) + 1));
             }
         }

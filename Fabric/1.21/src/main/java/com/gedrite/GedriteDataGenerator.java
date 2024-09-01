@@ -15,10 +15,10 @@ public class GedriteDataGenerator implements DataGeneratorEntrypoint {
 
 //		pack.addProvider(ModBlockTagProvider::new);
 //		pack.addProvider(ModItemTagProvider::new);
-//		pack.addProvider(ModLootTableGenerator::new);
+		pack.addProvider(ModLootTableGenerator::new);
 //		pack.addProvider(ModRecipeProvider::new);
 //		pack.addProvider(ModModelProvider::new);
-		pack.addProvider(ModWorldGenerator::new);
+//		pack.addProvider(ModWorldGenerator::new);
 
 	}
 	@Override

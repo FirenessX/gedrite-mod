@@ -5,7 +5,10 @@
   "experience": 0.7,
   "group": "gedrite_ingot",
   "ingredient": {
-    "item": "gedrite:deepslate_gedrite_ore"
+    "item": "gedrite:gedrite_ore"
   },
-  "result": "gedrite:gedrite_ingot"
+  "result": {
+    "id": "gedrite:gedrite_ingot",
+    "count": 1
+  }
 }

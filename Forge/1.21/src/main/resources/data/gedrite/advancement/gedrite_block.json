@@ -28,7 +28,7 @@
   ],
   "rewards": {
     "recipes": [
-      "gedrite:gedrite_block"
+      "gedrite:gedrite_block_from_gedrite"
     ]
   },
   "sends_telemetry_event": false
