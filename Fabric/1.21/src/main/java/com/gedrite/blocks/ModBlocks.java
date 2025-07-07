@@ -11,7 +11,7 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.ColorCode;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.math.intprovider.UniformIntProvider;
+import net.minecraft.util.math.intprovider.ConstantIntProvider;
 
 public class ModBlocks {
     public static final Block GEDRITE_BLOCK = registerBlock("gedrite_block",
@@ -19,9 +19,9 @@ public class ModBlocks {
     public static final Block RAW_GEDRITE_BLOCK = registerBlock("raw_gedrite_block",
             new Block(AbstractBlock.Settings.copy(Blocks.IRON_BLOCK).sounds(BlockSoundGroup.CORAL).mapColor(DyeColor.MAGENTA)));
     public static final Block GEDRITE_ORE = registerBlock("gedrite_ore",
-            new ExperienceDroppingBlock(UniformIntProvider.create(3, 7), AbstractBlock.Settings.copy(Blocks.IRON_ORE)));
+            new ExperienceDroppingBlock(ConstantIntProvider.create(0), AbstractBlock.Settings.copy(Blocks.IRON_ORE)));
     public static final Block DEEPSLATE_GEDRITE_ORE = registerBlock("deepslate_gedrite_ore",
-            new ExperienceDroppingBlock(UniformIntProvider.create(3, 7), AbstractBlock.Settings.copy(Blocks.DEEPSLATE_IRON_ORE)));
+            new ExperienceDroppingBlock(ConstantIntProvider.create(0), AbstractBlock.Settings.copy(Blocks.DEEPSLATE_IRON_ORE)));
     public static final Block GEDRITED_WATER_CAULDRON = registerBlock("gedrited_water_cauldron",
             new GedritedWaterCauldronBlock(AbstractBlock.Settings.copy(Blocks.CAULDRON)));
 
