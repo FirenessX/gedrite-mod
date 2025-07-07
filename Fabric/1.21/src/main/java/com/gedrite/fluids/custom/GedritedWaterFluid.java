@@ -95,7 +95,6 @@ public class GedritedWaterFluid extends FlowableFluid {
     protected int getLevelDecreasePerBlock(WorldView world) {
         return 2;
     }
-
     @Override
     public Item getBucketItem() {
         return ModFluids.GEDRITED_WATER_BUCKET;
@@ -103,7 +102,7 @@ public class GedritedWaterFluid extends FlowableFluid {
 
     @Override
     protected boolean canBeReplacedWith(FluidState state, BlockView world, BlockPos pos, Fluid fluid, Direction direction) {
-        return direction == Direction.DOWN && fluid.isIn(ModTags.Fluids.GEDRITED_WATER);
+        return direction == Direction.DOWN && !fluid.isIn(ModTags.Fluids.GEDRITED_WATER);
     }
 
     @Override
