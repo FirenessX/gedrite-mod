@@ -6,7 +6,7 @@ import com.gedrite.blocks.custom.GedritedWaterCauldronBlock;
 import com.gedrite.fluids.ModFluids;
 import com.gedrite.items.ModItems;
 import net.minecraft.util.ColorRGBA;
-import net.minecraft.util.valueproviders.UniformInt;
+import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
@@ -29,10 +29,10 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).sound(SoundType.CORAL_BLOCK)));
 
     public static final RegistryObject<Block> GEDRITE_ORE = registerBlock("gedrite_ore",
-            () -> new DropExperienceBlock(UniformInt.of(3, 7), BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_ORE)));
+            () -> new DropExperienceBlock(ConstantInt.of(0), BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_ORE)));
 
     public static final RegistryObject<Block> DEEPSLATE_GEDRITE_ORE = registerBlock("deepslate_gedrite_ore",
-            () -> new DropExperienceBlock(UniformInt.of(3, 7), BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_IRON_ORE)));
+            () -> new DropExperienceBlock(ConstantInt.of(0), BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_IRON_ORE)));
 
     public static final RegistryObject<LiquidBlock> GEDRITED_WATER_BLOCK = registerBlock("gedrited_water_block",
             () -> new LiquidBlock(ModFluids.SOURCE_GEDRITED_WATER, BlockBehaviour.Properties.ofFullCopy(Blocks.WATER)));
