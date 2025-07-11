@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "loader": "",
+  "textures": {
+    "layer0": "gedrite:item/metal_detector"
+  }
+}
