@@ -65,8 +65,8 @@ public class MetalDetectorItem extends Item{
     }
 
     private void outputValuableCoordinates(BlockPos blockPos, PlayerEntity player, Block block) {
-        player.sendMessage(Text.translatable("gedrite.metal_detector.foundBlock"), false);
-        player.sendMessage(Text.literal(block.asItem().getName().getString() + " (" + blockPos.getX() + ", " + blockPos.getY() + ", " + blockPos.getZ() + ")"), false);
+        player.sendMessage(Text.translatable("gedrite.metal_detector.foundBlock"), true);
+        player.sendMessage(Text.literal(block.asItem().getName().getString() + " (" + blockPos.getX() + ", " + blockPos.getY() + ", " + blockPos.getZ() + ")"), true);
     }
 
     private boolean isValuableBlock(BlockState state){

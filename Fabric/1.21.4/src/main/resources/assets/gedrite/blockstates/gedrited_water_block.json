@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gedrite:block/gedrited_water_block"
+    }
+  }
+}
