@@ -2,10 +2,8 @@ package com.gedrite.client.particle;
 
 import com.gedrite.fluids.ModFluids;
 import com.gedrite.particles.ModParticleTypes;
-import com.gedrite.util.ModTags;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
-import net.minecraft.client.particle.BlockLeakParticle;
 import net.minecraft.client.particle.ParticleTextureSheet;
 import net.minecraft.client.particle.SpriteBillboardParticle;
 import net.minecraft.client.particle.SpriteProvider;
@@ -13,9 +11,8 @@ import net.minecraft.client.world.ClientWorld;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.particle.SimpleParticleType;
 import net.minecraft.particle.ParticleEffect;
-import net.minecraft.particle.ParticleTypes;
+import net.minecraft.particle.SimpleParticleType;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
@@ -34,7 +31,7 @@ public abstract class ModBlockLeakParticle extends SpriteBillboardParticle {
     }
 
     public static SpriteBillboardParticle createDrippingGedritedWater(SimpleParticleType type, ClientWorld world, double x, double y, double z, double velocityX, double velocityY, double velocityZ, SpriteProvider spriteProvider) {
-        BlockPos pos = new BlockPos((int) x, (int) y, (int) z);
+//        BlockPos pos = new BlockPos((int) x, (int) y, (int) z);
 //        if (!world.getFluidState(pos.down()).isIn(ModTags.Fluids.GEDRITED_WATER)) {
             Dripping particle = new Dripping(world, x, y, z, ModFluids.GEDRITED_WATER, ModParticleTypes.FALLING_GEDRITED_WATER, spriteProvider);
             particle.setColor((float) 135/255, (float) 34/255, (float) 102/255);

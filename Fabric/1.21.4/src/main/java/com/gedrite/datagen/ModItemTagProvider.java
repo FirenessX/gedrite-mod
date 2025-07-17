@@ -1,5 +1,6 @@
 package com.gedrite.datagen;
 
+import com.gedrite.fluids.ModFluids;
 import com.gedrite.items.ModItems;
 import com.gedrite.util.ModTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
@@ -21,6 +22,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.GEDRITE_INGOT)
                 .add(ModItems.RAW_GEDRITE)
                 .add(ModItems.METAL_DETECTOR)
-                .add(ModItems.GEDRITED_COAL);
+                .add(ModItems.GEDRITED_COAL)
+                .add(ModFluids.GEDRITED_WATER_BUCKET);
     }
 }

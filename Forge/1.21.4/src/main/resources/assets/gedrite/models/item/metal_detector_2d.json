@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "gedrite:item/metal_detector_2d"
+    "layer0": "gedrite:item/metal_detector"
   }
 }

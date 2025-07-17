@@ -1,7 +1,6 @@
 package com.gedrite.mixin;
 
 import com.gedrite.util.ModTags;
-import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.WaterFluid;

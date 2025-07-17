@@ -44,11 +44,11 @@ public class MetalDetectorItem extends Item {
                         int distanceSq = (x * x) + (y * y) + (z * z);
                         if (distanceSq <= radiusSq) {
                             BlockState state = pContext.getLevel().getBlockState(blockPos);
-                            System.out.println(state);
-                            System.out.println(state.getTags());
-                            System.out.println(ModTags.Blocks.METAL_BLOCKS_FOR_MD);
+//                            System.out.println(state);
+//                            System.out.println(state.getTags());
+//                            System.out.println(ModTags.Blocks.METAL_BLOCKS_FOR_MD);
                             if(isValuableBlock(state)){
-                                System.out.println("OPA");
+//                                System.out.println("OPA");
                                 assert player != null;
                                 outputValuableCoordinates(blockPos, player, state.getBlock());
                                 foundBlock = true;
@@ -60,7 +60,7 @@ public class MetalDetectorItem extends Item {
                 }
             }
             if(!foundBlock){
-                System.out.println("5");
+//                System.out.println("5");
                 assert player != null;
                 player.displayClientMessage(Component.translatable("gedrite.metal_detector.dontFoundBlock"), true);
             }

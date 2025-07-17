@@ -28,7 +28,6 @@ public class Gedrite implements ModInitializer {
 		ModBiomeModification.register();
 		ModCauldronBehavior.registerBehavior();
 		ModDispenserBehavior.registerDefaults();
-//		FuelRegistry.INSTANCE.add(ModItems.GEDRITED_COAL, 3200);
 		FuelRegistryEvents.BUILD.register(((builder, context) -> {
 			builder.add(ModItems.GEDRITED_COAL, 3200);
 		}));

@@ -2,21 +2,18 @@ package com.gedrite.datagen;
 
 import com.gedrite.blocks.ModBlocks;
 import com.gedrite.items.ModItems;
-import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider;
-import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
-import net.minecraft.data.server.recipe.RecipeExporter;
-import net.minecraft.data.server.recipe.RecipeGenerator;
-import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
+import net.minecraft.data.recipe.RecipeExporter;
+import net.minecraft.data.recipe.RecipeGenerator;
+import net.minecraft.data.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
 import net.minecraft.recipe.book.RecipeCategory;
-import net.minecraft.registry.*;
-import net.minecraft.util.Identifier;
+import net.minecraft.registry.RegistryEntryLookup;
+import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.RegistryWrapper;
 
 import java.util.List;
-import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends RecipeGenerator {
     private static final List<ItemConvertible> GEDRITE_SMELTABLES = List.of(ModItems.RAW_GEDRITE, ModBlocks.GEDRITE_ORE, ModBlocks.DEEPSLATE_GEDRITE_ORE);
@@ -24,20 +21,6 @@ public class ModRecipeProvider extends RecipeGenerator {
     public ModRecipeProvider(RegistryWrapper.WrapperLookup registries, RecipeExporter exporter) {
         super(registries, exporter);
     }
-
-//    public ModRecipeProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
-//        super(output, registriesFuture);
-//    }
-//
-//    @Override
-//    protected RecipeGenerator getRecipeGenerator(RegistryWrapper.WrapperLookup registryLookup, RecipeExporter exporter) {
-//        return null;
-//    }
-//
-//    @Override
-//    public String getName() {
-//        return "";
-//    }
 
     @Override
     public void generate() {
