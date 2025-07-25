@@ -1,0 +1,134 @@
+[25Jul2025 00:09:54.731] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forge_userdev_data, --assetIndex, 26, --assetsDir, C:\Users\Fireness\.gradle\caches\forge_gradle\assets, --gameDir, ., --mod, gedrite, --all, --output, D:\IdeaProjects\gedrite-mod\Forge\1.21.6 v2\src\generated\resources, --existing, D:\IdeaProjects\gedrite-mod\Forge\1.21.6 v2\src\main\resources, --mixin.config, gedrite.mixins.json]
+[25Jul2025 00:09:54.737] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: JVM identified as Oracle Corporation Java HotSpot(TM) 64-Bit Server VM 21.0.6+8-LTS-188
+[25Jul2025 00:09:54.738] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.2.4 starting: java version 21.0.6 by Oracle Corporation; OS Windows 11 arch amd64 version 10.0
+[25Jul2025 00:09:54.953] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forge_userdev_data
+[25Jul2025 00:09:55.162] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=jar:file:///C:/Users/Fireness/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.7/8ab114ac385e6dbdad5efafe28aba4df8120915f/mixin-0.8.7.jar!/ Service=ModLauncher Env=UNKNOWN
+[25Jul2025 00:09:57.033] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[25Jul2025 00:09:58.422] [main/WARN] [mixin/]: Compatibility level JAVA_17 specified by gedrite.mixins.json is higher than the maximum level supported by this version of mixin (JAVA_13).
+[25Jul2025 00:09:58.423] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[25Jul2025 00:09:58.423] [main/ERROR] [mixin/]: Mixin config gedrite.mixins.json does not specify "minVersion" or "requiredFeatures" property
+[25Jul2025 00:09:58.429] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forge_userdev_data' with arguments [--gameDir, ., --assetsDir, C:\Users\Fireness\.gradle\caches\forge_gradle\assets, --assetIndex, 26, --mod, gedrite, --all, --output, D:\IdeaProjects\gedrite-mod\Forge\1.21.6 v2\src\generated\resources, --existing, D:\IdeaProjects\gedrite-mod\Forge\1.21.6 v2\src\main\resources]
+[25Jul2025 00:09:58.462] [main/INFO] [mixin/]: Attempting to load Fernflower decompiler (Threaded mode)
+[25Jul2025 00:09:58.465] [main/INFO] [mixin/]: Fernflower could not be loaded, exported classes will not be decompiled. NoClassDefFoundError: org/jetbrains/java/decompiler/main/extern/IResultSaver
+[25Jul2025 00:09:58.716] [main/INFO] [mixin/]: Preparing mixins for MixinEnvironment[DEFAULT]
+[25Jul2025 00:09:58.718] [main/INFO] [mixin/]: Selecting config gedrite.mixins.json
+[25Jul2025 00:09:58.733] [main/WARN] [mixin/]: Reference map 'mixins.gedrite.refmap.json' for gedrite.mixins.json could not be read. If this is a development environment you can ignore this message
+[25Jul2025 00:09:58.741] [main/INFO] [mixin/]: Preparing gedrite.mixins.json (6)
+[25Jul2025 00:09:58.947] [main/WARN] [mixin/]: Mixin environment was unable to detect the current side, sided mixins will not be applied
+[25Jul2025 00:09:59.037] [main/INFO] [mixin/]: Prepared 6 mixins in 0.312 sec (52.0ms avg) (0ms load, 0ms transform, 0ms plugin)
+[25Jul2025 00:09:59.974] [main/INFO] [mixin/]: Mixing EntityMixin from gedrite.mixins.json into net.minecraft.world.entity.Entity
+[25Jul2025 00:09:59.986] [main/WARN] [mixin/]: gedrite.mixins.json:EntityMixin: Class version 65 required is higher than the class version supported by the current version of Mixin (JAVA_17 supports class version 61)
+[25Jul2025 00:10:00.485] [main/INFO] [mixin/]: Mixing LivingEntityMixin from gedrite.mixins.json into net.minecraft.world.entity.LivingEntity
+[25Jul2025 00:10:00.495] [main/INFO] [mixin/]: Renaming synthetic method lambda$gedrite$baseTick$0(Lnet/minecraft/world/level/material/FluidState;)Z to md41efbc$lambda$gedrite$baseTick$0$0 in gedrite.mixins.json:LivingEntityMixin
+[25Jul2025 00:10:02.314] [main/INFO] [mixin/]: Mixing WaterFluidMixin from gedrite.mixins.json into net.minecraft.world.level.material.WaterFluid
+[25Jul2025 00:10:02.333] [main/INFO] [mixin/]: Mixing LavaFluidMixin from gedrite.mixins.json into net.minecraft.world.level.material.LavaFluid
+[25Jul2025 00:10:07.394] [main/INFO] [mixin/]: Mixing FishingHookMixin from gedrite.mixins.json into net.minecraft.world.entity.projectile.FishingHook
+[25Jul2025 00:10:09.423] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:root
+[25Jul2025 00:10:09.424] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:sound_event
+[25Jul2025 00:10:09.424] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:fluid
+[25Jul2025 00:10:09.424] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:particle_type
+[25Jul2025 00:10:09.424] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:attribute
+[25Jul2025 00:10:09.424] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:mob_effect
+[25Jul2025 00:10:09.424] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:block
+[25Jul2025 00:10:09.424] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:enchantment_effect_component_type
+[25Jul2025 00:10:09.424] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:loot_score_provider_type
+[25Jul2025 00:10:09.424] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:loot_number_provider_type
+[25Jul2025 00:10:09.424] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:map_decoration_type
+[25Jul2025 00:10:09.424] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:loot_pool_entry_type
+[25Jul2025 00:10:09.424] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:loot_nbt_provider_type
+[25Jul2025 00:10:09.424] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:loot_function_type
+[25Jul2025 00:10:09.424] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:data_component_type
+[25Jul2025 00:10:09.424] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:entity_type
+[25Jul2025 00:10:09.424] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:item
+[25Jul2025 00:10:09.424] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:game_event
+[25Jul2025 00:10:09.425] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:potion
+[25Jul2025 00:10:09.425] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:block_entity_type
+[25Jul2025 00:10:09.425] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:stat_type
+[25Jul2025 00:10:09.425] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:custom_stat
+[25Jul2025 00:10:09.425] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:chunk_status
+[25Jul2025 00:10:09.425] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:rule_test
+[25Jul2025 00:10:09.425] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:rule_block_entity_modifier
+[25Jul2025 00:10:09.425] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:pos_rule_test
+[25Jul2025 00:10:09.425] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:menu
+[25Jul2025 00:10:09.425] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:recipe_type
+[25Jul2025 00:10:09.425] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:recipe_serializer
+[25Jul2025 00:10:09.425] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:position_source_type
+[25Jul2025 00:10:09.425] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:command_argument_type
+[25Jul2025 00:10:09.425] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:villager_type
+[25Jul2025 00:10:09.425] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:villager_profession
+[25Jul2025 00:10:09.425] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:point_of_interest_type
+[25Jul2025 00:10:09.425] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:memory_module_type
+[25Jul2025 00:10:09.425] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:sensor_type
+[25Jul2025 00:10:09.425] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:activity
+[25Jul2025 00:10:09.425] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:schedule
+[25Jul2025 00:10:09.425] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:loot_condition_type
+[25Jul2025 00:10:09.427] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:float_provider_type
+[25Jul2025 00:10:09.427] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:int_provider_type
+[25Jul2025 00:10:09.427] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:height_provider_type
+[25Jul2025 00:10:09.427] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:block_predicate_type
+[25Jul2025 00:10:09.427] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/carver
+[25Jul2025 00:10:09.427] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/structure_processor
+[25Jul2025 00:10:09.427] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/feature
+[25Jul2025 00:10:09.427] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/structure_placement
+[25Jul2025 00:10:09.427] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/structure_piece
+[25Jul2025 00:10:09.427] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/structure_type
+[25Jul2025 00:10:09.427] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/placement_modifier_type
+[25Jul2025 00:10:09.427] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/block_state_provider_type
+[25Jul2025 00:10:09.427] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/foliage_placer_type
+[25Jul2025 00:10:09.427] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/trunk_placer_type
+[25Jul2025 00:10:09.427] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/root_placer_type
+[25Jul2025 00:10:09.427] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/tree_decorator_type
+[25Jul2025 00:10:09.428] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/feature_size_type
+[25Jul2025 00:10:09.428] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/biome_source
+[25Jul2025 00:10:09.428] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/chunk_generator
+[25Jul2025 00:10:09.428] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/material_condition
+[25Jul2025 00:10:09.428] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/material_rule
+[25Jul2025 00:10:09.428] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/density_function_type
+[25Jul2025 00:10:09.428] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:block_type
+[25Jul2025 00:10:09.428] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/structure_pool_element
+[25Jul2025 00:10:09.429] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:worldgen/pool_alias_binding
+[25Jul2025 00:10:09.429] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:decorated_pot_pattern
+[25Jul2025 00:10:09.429] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:creative_mode_tab
+[25Jul2025 00:10:09.430] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:trigger_type
+[25Jul2025 00:10:09.431] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:number_format_type
+[25Jul2025 00:10:09.431] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:entity_sub_predicate_type
+[25Jul2025 00:10:09.431] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:data_component_predicate_type
+[25Jul2025 00:10:09.431] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:enchantment_level_based_value_type
+[25Jul2025 00:10:09.431] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:enchantment_entity_effect_type
+[25Jul2025 00:10:09.431] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:enchantment_location_based_effect_type
+[25Jul2025 00:10:09.432] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:enchantment_value_effect_type
+[25Jul2025 00:10:09.432] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:enchantment_provider_type
+[25Jul2025 00:10:09.432] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:consume_effect_type
+[25Jul2025 00:10:09.432] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:recipe_display
+[25Jul2025 00:10:09.432] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:slot_display
+[25Jul2025 00:10:09.432] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:recipe_book_category
+[25Jul2025 00:10:09.432] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:ticket_type
+[25Jul2025 00:10:09.432] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:test_environment_definition_type
+[25Jul2025 00:10:09.432] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:test_instance_type
+[25Jul2025 00:10:09.432] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:spawn_condition_type
+[25Jul2025 00:10:09.432] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:dialog_type
+[25Jul2025 00:10:09.432] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:dialog_action_type
+[25Jul2025 00:10:09.432] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:input_control_type
+[25Jul2025 00:10:09.432] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:dialog_body_type
+[25Jul2025 00:10:09.432] [main/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: 	minecraft:test_function
+[25Jul2025 00:10:09.794] [modloading-worker-0/ERROR] [net.minecraftforge.fml.javafmlmod.FMLModContainer/LOADING]: Failed to create mod instance. ModID: gedrite, class com.gedrite.Gedrite
+java.lang.IllegalArgumentException: No listeners found in class com.gedrite.Gedrite
+	at SECURE-BOOTSTRAP/net.minecraftforge.eventbus/net.minecraftforge.eventbus.internal.EventListenerFactory.register(EventListenerFactory.java:84) ~[eventbus-7.0-beta.10.jar:7.0-beta.10]
+	at SECURE-BOOTSTRAP/net.minecraftforge.eventbus/net.minecraftforge.eventbus.internal.BusGroupImpl.register(BusGroupImpl.java:72) ~[eventbus-7.0-beta.10.jar:7.0-beta.10]
+	at TRANSFORMER/gedrite@1.21.6/com.gedrite.Gedrite.<init>(Gedrite.java:43) ~[main/:?]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?]
+	at LAYER PLUGIN/net.minecraftforge.javafmlmod@1.21.6-56.0.9/net.minecraftforge.fml.javafmlmod.FMLModContainer.constructMod(FMLModContainer.java:137) ~[javafmllanguage-1.21.6-56.0.9.jar!/:56.0.9]
+	at LAYER PLUGIN/net.minecraftforge.fmlcore@1.21.6-56.0.9/net.minecraftforge.fml.ModStateTransitionHelper.lambda$addCompletableFutureTaskForModDispatch$4(ModStateTransitionHelper.java:120) ~[fmlcore-1.21.6-56.0.9.jar!/:1.0]
+	at java.base/java.util.concurrent.CompletableFuture$UniRun.tryFire(CompletableFuture.java:787) [?:?]
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:483) [?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1310) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1841) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1806) [?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) [?:?]
+[25Jul2025 00:10:09.830] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 56.0.9, for MC 1.21.6 with MCP 20250618.020446
+[25Jul2025 00:10:09.835] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v56.0.9 Initialized
+[25Jul2025 00:10:09.860] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Opening jdk.naming.dns/com.sun.jndi.dns to java.naming
+[25Jul2025 00:10:10.063] [main/FATAL] [net.minecraftforge.fml.ModLoader/LOADING]: Failed to complete lifecycle event CONSTRUCT, 1 errors found
