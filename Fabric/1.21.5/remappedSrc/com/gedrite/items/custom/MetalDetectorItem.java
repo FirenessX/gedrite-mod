@@ -3,6 +3,7 @@ package com.gedrite.items.custom;
 import com.gedrite.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.component.type.TooltipDisplayComponent;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
@@ -17,6 +18,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 import java.util.Objects;
+import java.util.function.Consumer;
 
 public class MetalDetectorItem extends Item{
     public MetalDetectorItem(net.minecraft.item.Item.Settings settings){
@@ -74,8 +76,8 @@ public class MetalDetectorItem extends Item{
     }
 
     @Override
-    public void appendTooltip(ItemStack stack, TooltipContext context, List<Text> tooltip, TooltipType type) {
-        tooltip.add(Text.translatable("tooltip.gedrite.metal_detector.tooltip"));
-        super.appendTooltip(stack, context, tooltip, type);
+    public void appendTooltip(ItemStack stack, TooltipContext context, TooltipDisplayComponent displayComponent, Consumer<Text> textConsumer, TooltipType type) {
+        textConsumer.accept(Text.translatable("tooltip.gedrite.metal_detector.tooltip"));
+        super.appendTooltip(stack, context, displayComponent, textConsumer, type);
     }
 }
