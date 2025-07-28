@@ -1,6 +1,0 @@
-{
-  "type": "neoforge:add_features",
-  "biomes": "#minecraft:is_overworld",
-  "features": "gedrite:ore_gedrite_medium",
-  "step": "underground_ores"
-}
