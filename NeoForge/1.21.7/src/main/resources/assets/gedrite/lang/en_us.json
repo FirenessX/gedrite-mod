@@ -1,0 +1,29 @@
+{
+  "item.gedrite.gedrite_ingot": "Gedrite Ingot",
+  "item.gedrite.raw_gedrite": "Raw Gedrite",
+  "item.gedrite.gedrited_coal": "Gedrited Coal",
+  "item.gedrite.metal_detector": "Metal Detector",
+  "item.gedrite.gedrited_water_bucket": "Gedrited Water Bucket",
+
+  "item.gedrite.gedrite_ore": "Gedrite Ore",
+  "item.gedrite.deepslate_gedrite_ore": "Deepslate Gedrite Ore",
+  "item.gedrite.gedrite_block": "Block of Gedrite",
+  "item.gedrite.raw_gedrite_block": "Block of Raw Gedrite",
+  "item.gedrited_water_block": "Gedrited Water",
+
+  "block.gedrite.gedrite_ore": "Gedrite Ore",
+  "block.gedrite.deepslate_gedrite_ore": "Deepslate Gedrite Ore",
+  "block.gedrite.gedrite_block": "Block of Gedrite",
+  "block.gedrite.raw_gedrite_block": "Block of Raw Gedrite",
+  "block.gedrited_water_block": "Gedrited Water",
+
+  "effect.gedrite.decay": "Decay",
+
+  "death.attack.decay": "%1$s decayed alive",
+
+  "creativetab.gedrite_tab": "Gedrite",
+
+  "tooltip.gedrite.metal_detector.tooltip": "Finds metals in a sphere with a radius of 8 blocks",
+  "gedrite.metal_detector.foundBlock": "Success: ",
+  "gedrite.metal_detector.dontFoundBlock": "ERROR: Keep looking elsewhere"
+}
