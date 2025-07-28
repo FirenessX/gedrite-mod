@@ -85,7 +85,7 @@ public class ModDripParticle extends TextureSheetParticle {
     }
 
 
-    @OnlyIn(Dist.CLIENT)
+//    @OnlyIn(Dist.CLIENT)
     static class DripHangParticle extends ModDripParticle {
         private final ParticleOptions fallingParticle;
 
@@ -111,7 +111,7 @@ public class ModDripParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
+//    @OnlyIn(Dist.CLIENT)
     static class FallingParticle extends ModDripParticle {
         FallingParticle(ClientLevel pLevel, double pX, double pY, double pZ, Fluid pType, SpriteSet spriteSet) {
             this(pLevel, pX, pY, pZ, pType, (int) (64.0D / (Math.random() * 0.8D + 0.2D)), spriteSet);
@@ -129,7 +129,7 @@ public class ModDripParticle extends TextureSheetParticle {
 
         }
 
-        @OnlyIn(Dist.CLIENT)
+//        @OnlyIn(Dist.CLIENT)
         static class FallAndLandParticle extends FallingParticle {
             protected final ParticleOptions landParticle;
 
@@ -148,7 +148,7 @@ public class ModDripParticle extends TextureSheetParticle {
         }
     }
 
-    @OnlyIn(Dist.CLIENT)
+//    @OnlyIn(Dist.CLIENT)
     static class DripLandParticle extends ModDripParticle {
         DripLandParticle(ClientLevel pLevel, double pX, double pY, double pZ, Fluid pType, SpriteSet spriteSet) {
             super(pLevel, pX, pY, pZ, pType, spriteSet);
