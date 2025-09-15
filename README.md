@@ -1,5 +1,5 @@
 # The Gedrite Mod
-![Gedrite: The Mod](https://i.imgur.com/JP0yLG7.png)
+![Gedrite: The Mod](https://i.imgur.com/BXX1BxH.png)
 
 ## Adds Gedrite in your world. Gedrite is a liquid and useful metal. you can even _eat_ it!
 
@@ -16,15 +16,15 @@
     + Gedrite
 + ![Gedrited Water Bucket](https://i.imgur.com/1730gMC.png) Gedrited Water Bucket
 
-![Gedrite Items](https://i.imgur.com/PrNnJHz.png)
+![Gedrite Items](https://i.imgur.com/NBQSo94.png)
 
 ## Blocks:
-+ ![Gedrite Ore](https://i.imgur.com/XkQX6oG.png) Gedrite Ore
-+ ![Deepslate Gedrite Ore](https://i.imgur.com/cM9tulO.png) Deepslate Gedrite Ore
++ ![Gedrite Ore](https://i.imgur.com/5FbyhkV.png) Gedrite Ore
++ ![Deepslate Gedrite Ore](https://i.imgur.com/a5O7hAW.png) Deepslate Gedrite Ore
 + ![Raw Gedrite Block](https://i.imgur.com/smGbet2.png) Raw Gedrite Block
 + ![Gedrite Block](https://i.imgur.com/h54qh5V.png) Gedrite Block
 
-![Gedrite Blocks](https://i.imgur.com/d7TMFJj.png)
+![Gedrite Blocks](https://i.imgur.com/tLOfnAj.png)
 
 ## Fluids:
 + ![Gedrited Water](https://i.imgur.com/A1Bdz4Z.png) Gedrited Water
