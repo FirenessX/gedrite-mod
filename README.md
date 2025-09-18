@@ -17,6 +17,15 @@
 + ![Gedrited Water Bucket](https://i.imgur.com/1730gMC.png) Gedrited Water Bucket
 
 ![Gedrite Items](https://i.imgur.com/NBQSo94.png)
+![Metal Detector Recipe](https://i.imgur.com/SPdyUmm.png)
+
+<hr>
+
++ ![Gedrite Arrow](https://i.imgur.com/KdG5kER.png) Gedrite Arrow
+  + An arrow that applies the ![Decay](https://i.imgur.com/PUioi3l.png) **Decay** Effect to target
+
+![Gedrite Arrow](https://i.imgur.com/0zK64Eq.png)
+![Gedrite Arrow Recipe](https://i.imgur.com/Hbx4NB8.png)
 
 ## Blocks:
 + ![Gedrite Ore](https://i.imgur.com/5FbyhkV.png) Gedrite Ore
@@ -28,7 +37,9 @@
 
 ## Fluids:
 + ![Gedrited Water](https://i.imgur.com/A1Bdz4Z.png) Gedrited Water
-  + **Gedrited Water** is a deadly liquid that gives **Decay** effect to any **living creature.** The only way to get this fluid - place **water** next to ![Gedrite Block](https://i.imgur.com/h54qh5V.png) **Gedrite Block** 
+  + **Gedrited Water** is a deadly liquid that gives ![Decay](https://i.imgur.com/PUioi3l.png) **Decay** effect to any **living creature.** The only way to get this fluid - place **water** next to ![Gedrite Block](https://i.imgur.com/h54qh5V.png) **Gedrite Block** 
+
+![Gedrited Water](https://i.imgur.com/MOsyWWC.png)
  
 ## Effects:
 + ![Decay](https://i.imgur.com/PUioi3l.png) Decay
