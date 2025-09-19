@@ -6,6 +6,8 @@
 ## Items:
 + ![Raw Gedrite](https://i.imgur.com/l2jthxd.png) Raw Gedrite
 + ![Gedrite Ingot](https://i.imgur.com/VWwRjgH.png) Gedrite Ingot
+  + You can eat it... and get poisoned.
+  + Usable as **Armor Trim Material** craft
 + ![Gedrited Coal](https://i.imgur.com/ov2nQDA.png) Gedrited Coal
   + This is a coal, which recombined with __gedrite.__ It can smelt 16 items 
 + ![Metal Detector](https://i.imgur.com/1CTCnqK.png) Metal Detector
@@ -18,6 +20,9 @@
 
 ![Gedrite Items](https://i.imgur.com/NBQSo94.png)
 ![Metal Detector Recipe](https://i.imgur.com/SPdyUmm.png)
+
+## NEW | Gedrite as Armor Trim Material
+![Gedrite Armor Trim](https://i.imgur.com/sB9gXgQ.png)
 
 <hr>
 
