@@ -21,16 +21,14 @@
 ![Gedrite Items](https://i.imgur.com/NBQSo94.png)
 ![Metal Detector Recipe](https://i.imgur.com/SPdyUmm.png)
 
-## NEW | Gedrite as Armor Trim Material
-![Gedrite Armor Trim](https://i.imgur.com/sB9gXgQ.png)
-
-<hr>
-
 + ![Gedrite Arrow](https://i.imgur.com/KdG5kER.png) Gedrite Arrow
   + An arrow that applies the ![Decay](https://i.imgur.com/PUioi3l.png) **Decay** Effect to target
 
 ![Gedrite Arrow](https://i.imgur.com/0zK64Eq.png)
 ![Gedrite Arrow Recipe](https://i.imgur.com/Hbx4NB8.png)
+
+## NEW | Gedrite as Armor Trim Material
+![Gedrite Armor Trim](https://i.imgur.com/sB9gXgQ.png)
 
 ## Blocks:
 + ![Gedrite Ore](https://i.imgur.com/5FbyhkV.png) Gedrite Ore
