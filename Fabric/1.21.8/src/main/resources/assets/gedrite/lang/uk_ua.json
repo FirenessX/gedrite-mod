@@ -3,7 +3,7 @@
   "item.gedrite.raw_gedrite": "Необроблений ґедрит",
   "item.gedrite.gedrited_coal": "Ґедритове вугілля",
   "item.gedrite.metal_detector": "Металошукач",
-  "item.gedrite.gedrited_water_bucket": "Відро ґедритова води",
+  "item.gedrite.gedrited_water_bucket": "Відро ґедритової води",
   "item.gedrite.gedrite_arrow": "Ґедритова стріла",
 
   "item.gedrite.gedrite_ore": "Ґедритова руда",
@@ -18,7 +18,7 @@
 
   "itemgroup.gedrite": "Gedrite",
 
-  "tooltip.gedrite.metal_detector.tooltip": "Знаходить метали в кулі радіусом 8 блоків",
+  "tooltip.gedrite.metal_detector.tooltip": "Знаходить метали в радіусі радіусом 8 блоків",
   "gedrite.metal_detector.foundBlock": "Успіх: ",
   "gedrite.metal_detector.dontFoundBlock": "ПОМИЛКА: Продовжуйте шукати в іншому місці",
   "trim_material.gedrite.gedrite": "Ґедритовий матеріал",
