@@ -23,7 +23,7 @@
   "gedrite.metal_detector.dontFoundBlock": "ПОМИЛКА: Продовжуйте шукати в іншому місці",
   "trim_material.gedrite.gedrite": "Ґедритовий матеріал",
   
-  "sounds.gedrite.metal_detector_use": "Металошукач активується"
+  "sounds.gedrite.metal_detector_use": "Металошукач активується",
   
   "modmenu.descriptionTranslation.gedrite": "Додає ґедрит у ваш світ. Ґедрит —— рідкий і корисний метал, його навіть можна їсти! Дивіться більше інформації на сторінці мода у Curseforge/Modrinth"
 }
