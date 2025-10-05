@@ -1,0 +1,54 @@
+package com.gedrite.event;
+
+import com.gedrite.Gedrite;
+import com.gedrite.client.particle.ModDripParticle;
+import com.gedrite.core.particles.ModParticles;
+import com.gedrite.mixins.ParticleResourcesAccessor;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.particle.SpellParticle;
+import net.minecraft.client.renderer.texture.TextureAtlasSprite;
+import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.block.state.BlockState;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
+import net.neoforged.neoforge.event.level.BlockEvent;
+
+public class ModEventBus {
+    @net.neoforged.bus.api.SubscribeEvent
+    public static void registerParticleFactories(final RegisterParticleProvidersEvent event) {
+        ((ParticleResourcesAccessor) Minecraft.getInstance()).getParticleResources().register(
+                ModParticles.DECAY_PARTICLE.get(),
+                SpellParticle.Provider::new
+        );
+        ((ParticleResourcesAccessor) Minecraft.getInstance()).getParticleResources().register(
+                ModParticles.DRIPPING_GEDRITED_WATER.get(),
+                spriteSet -> (parameters, world, x, y, z, velocityX, velocityY, velocityZ, randomSource) -> {
+                    TextureAtlasSprite atlas = spriteSet.get(world.random); // ← вот он!
+                    return ModDripParticle.createGedritedWaterHangParticle(
+                            parameters, world, x, y, z, velocityX, velocityY, velocityZ, atlas, spriteSet);
+                }
+        );
+        ((ParticleResourcesAccessor) Minecraft.getInstance()).getParticleResources().register(
+                ModParticles.FALLING_GEDRITED_WATER.get(),
+                spriteSet -> (parameters, world, x, y, z, velocityX, velocityY, velocityZ, randomSource) -> {
+                    TextureAtlasSprite atlas = spriteSet.get(world.random); // ← вот он!
+                    return ModDripParticle.createGedritedWaterFallParticle(
+                            parameters, world, x, y, z, velocityX, velocityY, velocityZ, atlas, spriteSet);
+                }
+        );
+        ((ParticleResourcesAccessor) Minecraft.getInstance()).getParticleResources().register(
+                ModParticles.LANDING_GEDRITED_WATER.get(),
+                spriteSet -> (parameters, world, x, y, z, velocityX, velocityY, velocityZ, randomSource) -> {
+                    TextureAtlasSprite atlas = spriteSet.get(world.random); // ← вот он!
+                    return ModDripParticle.createGedritedWaterLandParticle(
+                            parameters, world, x, y, z, velocityX, velocityY, velocityZ, atlas, spriteSet);
+                }
+        );
+    }
+
+    public static BlockState gedriteFluidPlaceBlockEvent(LevelAccessor level, BlockPos pos, BlockPos liquidPos, BlockState state) {
+        return new BlockEvent.FluidPlaceBlockEvent(level, pos, liquidPos, state).getNewState();
+    }
+}
