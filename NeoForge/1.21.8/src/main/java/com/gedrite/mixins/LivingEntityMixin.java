@@ -24,13 +24,11 @@ public class LivingEntityMixin {
     @Inject(method = "baseTick", at = @At("HEAD"))
     private void gedrite$baseTick(CallbackInfo ci) {
         LivingEntity livingEntity = (LivingEntity) (Object) this;
-        if (livingEntity instanceof LivingEntity){
+        if (livingEntity instanceof LivingEntity) {
             if (livingEntity.isAlive()) {
                 Predicate<FluidState> isGW = state -> state.isSource() && state.getType().isSame(ModFluids.SOURCE_GEDRITED_WATER.get()) || !state.isSource() && state.getType().isSame(ModFluids.FLOWING_GEDRITED_WATER.get());
-                if(updateMovementInFluid(livingEntity, isGW)){
-                    if (!livingEntity.hasEffect(ModEffects.DECAY.getDelegate())) {
-                        livingEntity.addEffect(new MobEffectInstance(ModEffects.DECAY.getDelegate(), 60, 0, false, false, true));
-                    }
+                if (updateMovementInFluid(livingEntity, isGW)) {
+                    ModFluids.decayEffect(livingEntity);
                 } else {
 //                    livingEntity.removeEffect(ModEffects.DECAY.getHolder().get());
                 }
@@ -53,9 +51,10 @@ public class LivingEntityMixin {
 //        System.out.println(entity.getDeltaMovement().z * 10000);
 //        System.out.println();
         if (entity.isLocalInstanceAuthoritative()){
+            boolean bl;
             double d0 = entity.getGravity();
-            boolean flag = entity.getDeltaMovement().y <= 0.0;
-            if (flag && entity.hasEffect(MobEffects.SLOW_FALLING)) {
+            boolean flag = bl = entity.getDeltaMovement().y <= 0.0;
+            if (bl && entity.hasEffect(MobEffects.SLOW_FALLING)) {
                 d0 = Math.min(d0, 0.01);
             }
 
@@ -72,7 +71,7 @@ public class LivingEntityMixin {
 //                entity.move(MoverType.SELF, entity.getDeltaMovement());
 //                if (entity.getFluidHeight(ModTags.Fluids.GEDRITED_WATER) <= entity.getFluidJumpThreshold()) {
 //                    entity.setDeltaMovement(entity.getDeltaMovement().multiply(0.7D, (double)0.9F, 0.7D));
-//                    Vec3 vec33 = gedrite$getFluidFallingAdjustedMovement(d0, flag, entity.getDeltaMovement(), entity);
+//                    Vec3 vec33 = gedrite$getFluidFallingAdjustedMovement(d0, bl, entity.getDeltaMovement(), entity);
 //                    entity.setDeltaMovement(vec33);
 //                } else {
 //                    entity.setDeltaMovement(entity.getDeltaMovement().scale(0.7D));
@@ -88,11 +87,11 @@ public class LivingEntityMixin {
 //                entity.move(MoverType.SELF, entity.getDeltaMovement());
                 Vec3 vec35;
                 if (entity.getFluidHeight(ModTags.Fluids.GEDRITED_WATER) <= entity.getFluidJumpThreshold()) {
-                    entity.setDeltaMovement(entity.getDeltaMovement().multiply(0.7, 0.9000000134110451, 0.7));
-                    vec35 = entity.getFluidFallingAdjustedMovement(d0, flag, entity.getDeltaMovement());
+                    entity.setDeltaMovement(entity.getDeltaMovement().multiply(1.05, 1.35, 1.05));
+                    vec35 = entity.getFluidFallingAdjustedMovement(d0, bl, entity.getDeltaMovement());
                     entity.setDeltaMovement(vec35);
                 } else {
-                    entity.setDeltaMovement(entity.getDeltaMovement().scale(0.7));
+                    entity.setDeltaMovement(entity.getDeltaMovement().scale(1.05));
                 }
 
                 vec35 = entity.getDeltaMovement();

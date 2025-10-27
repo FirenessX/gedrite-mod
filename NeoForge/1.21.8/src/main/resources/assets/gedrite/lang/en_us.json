@@ -4,12 +4,7 @@
   "item.gedrite.gedrited_coal": "Gedrited Coal",
   "item.gedrite.metal_detector": "Metal Detector",
   "item.gedrite.gedrited_water_bucket": "Gedrited Water Bucket",
-
-  "item.gedrite.gedrite_ore": "Gedrite Ore",
-  "item.gedrite.deepslate_gedrite_ore": "Deepslate Gedrite Ore",
-  "item.gedrite.gedrite_block": "Block of Gedrite",
-  "item.gedrite.raw_gedrite_block": "Block of Raw Gedrite",
-  "item.gedrited_water_block": "Gedrited Water",
+  "item.gedrite.gedrite_arrow": "Gedrite Arrow",
 
   "block.gedrite.gedrite_ore": "Gedrite Ore",
   "block.gedrite.deepslate_gedrite_ore": "Deepslate Gedrite Ore",
@@ -25,5 +20,9 @@
 
   "tooltip.gedrite.metal_detector.tooltip": "Finds metals in a sphere with a radius of 8 blocks",
   "gedrite.metal_detector.foundBlock": "Success: ",
-  "gedrite.metal_detector.dontFoundBlock": "ERROR: Keep looking elsewhere"
+  "gedrite.metal_detector.dontFoundBlock": "ERROR: Keep looking elsewhere",
+
+  "trim_material.gedrite.gedrite": "Gedrite Material",
+
+  "sounds.gedrite.metal_detector_use": "Metal Detector activates"
 }

@@ -20,6 +20,7 @@ public class ModItemTagGenerator extends ItemTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider pProvider) {
         this.tag(ModTags.Items.GEDRITE_ITEMS)
-                .add(ModItems.GEDRITE_INGOT.get(), ModItems.RAW_GEDRITE.get(), ModItems.GEDRITED_COAL.get(), ModItems.METAL_DETECTOR.get());
+                .add(ModItems.GEDRITE_INGOT.get(), ModItems.RAW_GEDRITE.get(), ModItems.GEDRITED_COAL.get(), ModItems.METAL_DETECTOR.get(),
+                        ModItems.GEDRITE_ARROW.get());
     }
 }

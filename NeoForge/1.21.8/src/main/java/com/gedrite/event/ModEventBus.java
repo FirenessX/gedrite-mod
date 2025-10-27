@@ -4,6 +4,7 @@ import com.gedrite.Gedrite;
 import com.gedrite.client.particle.ModDripParticle;
 import com.gedrite.core.particles.ModParticles;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.particle.SpellParticle;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.state.BlockState;
@@ -15,6 +16,7 @@ import net.neoforged.neoforge.event.level.BlockEvent;
 public class ModEventBus {
     @net.neoforged.bus.api.SubscribeEvent
     public static void registerParticleFactories(final RegisterParticleProvidersEvent event) {
+        Minecraft.getInstance().particleEngine.register(ModParticles.DECAY_PARTICLE.get(), SpellParticle.InstantProvider::new);
         Minecraft.getInstance().particleEngine.register(ModParticles.DRIPPING_GEDRITED_WATER.get(), spriteSet ->
                 (parameters, world, x, y, z, velocityX, velocityY, velocityZ) -> ModDripParticle.createGedritedWaterHangParticle(parameters, world, x, y, z, velocityX, velocityY, velocityZ, spriteSet));
         Minecraft.getInstance().particleEngine.register(ModParticles.FALLING_GEDRITED_WATER.get(), spriteSet ->

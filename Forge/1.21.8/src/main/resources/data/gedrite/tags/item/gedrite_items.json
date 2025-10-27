@@ -4,6 +4,10 @@
     "gedrite:gedrite_ingot",
     "gedrite:raw_gedrite",
     "gedrite:metal_detector",
-    "gedrite:gedrited_coal"
+    "gedrite:gedrited_coal",
+    "gedrite:gedrited_water_bucket",
+    "gedrite:gedrite_arrow",
+    "gedrite:deepslate_gedrite_ore",
+    "gedrite:gedrite_ore"
   ]
 }

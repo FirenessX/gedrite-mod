@@ -1,6 +1,7 @@
 package com.gedrite.datagen;
 
 import com.gedrite.Gedrite;
+import com.gedrite.trims.ModTrimMaterials;
 import com.gedrite.worldgen.ModBiomeModifiers;
 import com.gedrite.worldgen.ModConfiguredFeatures;
 import com.gedrite.worldgen.ModPlacedFeatures;
@@ -18,9 +19,10 @@ public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
             .add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap)
             .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap)
-            .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap);
+            .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap)
+            .add(Registries.TRIM_MATERIAL, ModTrimMaterials::bootstrap);
 
     public ModWorldGenProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-        super(output, registries, BUILDER, Set.of(Gedrite.MODID));
+        super(output, registries, BUILDER, Set.of(Gedrite.MOD_ID));
     }
 }

@@ -101,6 +101,15 @@ public interface ModCauldronInteraction {
         mapGW.put(Items.WATER_BUCKET,  ModCauldronInteraction::fillWaterInteraction);
         mapGW.put(Items.LAVA_BUCKET,  ModCauldronInteraction::fillLavaInteraction);
         mapGW.put(Items.POWDER_SNOW_BUCKET,  ModCauldronInteraction::fillPowderSnowInteraction);
+
+        mapGW.put(Items.ARROW, (state, world, pos, player, hand, stack) -> {
+            if (world.isClientSide()) return InteractionResult.SUCCESS;
+
+            int arrowsInHand = stack.getCount();
+            int arrowsToConvert = Math.min(arrowsInHand, 5);
+            if (!player.isCreative()) stack.shrink(arrowsToConvert - 1);
+            return CauldronInteraction.fillBucket(state, world, pos, player, hand, stack, new ItemStack(ModItems.GEDRITE_ARROW.get(), arrowsToConvert),statex -> true, SoundEvents.CANDLE_EXTINGUISH);
+        });
     }
 
 //    static void addDefaultInteractions(Map<Item, CauldronInteraction> pInteractionsMap) {

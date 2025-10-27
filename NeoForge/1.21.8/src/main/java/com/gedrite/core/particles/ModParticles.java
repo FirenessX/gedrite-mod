@@ -11,14 +11,16 @@ import java.util.function.Supplier;
 
 public class ModParticles {
     public static final DeferredRegister<ParticleType<?>> PARTICLE_TYPES =
-            DeferredRegister.create(Registries.PARTICLE_TYPE, Gedrite.MODID);
+            DeferredRegister.create(Registries.PARTICLE_TYPE, Gedrite.MOD_ID);
 
+    public static final Supplier<SimpleParticleType> DECAY_PARTICLE =
+            PARTICLE_TYPES.register("decay_particle", (properties) -> new SimpleParticleType(true));
     public static final Supplier<SimpleParticleType> DRIPPING_GEDRITED_WATER =
             PARTICLE_TYPES.register("dripping_gedrited_water", (properties) -> new SimpleParticleType(true));
     public static final Supplier<SimpleParticleType> FALLING_GEDRITED_WATER =
             PARTICLE_TYPES.register("falling_gedrited_water", (properties) -> new SimpleParticleType(true));
     public static final Supplier<SimpleParticleType> LANDING_GEDRITED_WATER =
-            PARTICLE_TYPES.register("landing_gedrited_water", () -> new SimpleParticleType(true));
+            PARTICLE_TYPES.register("landing_gedrited_water", (properties) -> new SimpleParticleType(true));
 
     public static void register(IEventBus eventBus) {
         PARTICLE_TYPES.register(eventBus);

@@ -16,6 +16,7 @@ import net.minecraft.world.phys.BlockHitResult;
 
 public interface ModDispenserItemBehavior {
     static void registerBehavior() {
+        DispenserBlock.registerProjectileBehavior(ModItems.GEDRITE_ARROW);
 //        DispenseItemBehavior dispenseitembehavior = new DefaultDispenseItemBehavior() {
 //            private final DefaultDispenseItemBehavior defaultDispenseItemBehavior = new DefaultDispenseItemBehavior();
 //

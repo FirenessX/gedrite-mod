@@ -2,8 +2,10 @@ package com.gedrite.fluids;
 
 import com.gedrite.Gedrite;
 import com.gedrite.util.ModTags;
+import com.gedrite.world.effects.ModEffects;
 import com.gedrite.world.level.material.GedritedWaterFluid;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -23,34 +25,13 @@ import java.util.function.Supplier;
 
 public class ModFluids {
     public static final DeferredRegister<Fluid> FLUIDS =
-            DeferredRegister.create(Registries.FLUID, Gedrite.MODID);
+            DeferredRegister.create(Registries.FLUID, Gedrite.MOD_ID);
 
     public static final DeferredHolder<Fluid, FlowingFluid> SOURCE_GEDRITED_WATER = FLUIDS.register("gedrited_water_still",
             (properties) -> new GedritedWaterFluid.Source());
 
     public static final DeferredHolder<Fluid, FlowingFluid> FLOWING_GEDRITED_WATER = FLUIDS.register("gedrited_water_flow",
             (properties) -> new GedritedWaterFluid.Flowing());
-//
-//    public static final DeferredRegister<FlowingFluid> SOURCE_TEST = FLUIDS.register("test_still",
-//            () -> new FlowingFluid.Source(ModFluids.TEST_PROPERTIES));
-//
-//    public static final DeferredRegister<FlowingFluid> FLOWING_TEST = FLUIDS.register("test_flow",
-//            () -> new ForgeFlowingFluid.Flowing(ModFluids.TEST_PROPERTIES));
-
-
-//    public static final ForgeFlowingFluid.Properties GEDRITED_WATER_PROPERTIES = new ForgeFlowingFluid.Properties(ModFluidTypes.GEDRITED_WATER_FLUID_TYPE.get(), ModFluids.SOURCE_GEDRITED_WATER, ModFluids.FLOWING_GEDRITED_WATER)
-//            .levelDecreasePerBlock(2)
-//            .block(ModBlocks.GEDRITED_WATER_BLOCK)
-//            .bucket(ModItems.GEDRITED_WATER_BUCKET)
-//            .tickRate(20)
-//            .explosionResistance(100F);
-
-//    public static final ForgeFlowingFluid.Properties TEST_PROPERTIES = new ForgeFlowingFluid.Properties(ModFluidTypes.TEST_FLUID_TYPE, ModFluids.SOURCE_TEST, ModFluids.FLOWING_TEST)
-//            .levelDecreasePerBlock(2)
-//            .block(ModBlocks.TEST_FLUID_BLOCK)
-//            .tickRate(20)
-//            .explosionResistance(100F)
-//            ;
 
     public static boolean isGedritedWater(FluidState state) {
         return state.is(ModFluids.SOURCE_GEDRITED_WATER.get()) || state.is(ModFluids.FLOWING_GEDRITED_WATER.get());
@@ -58,6 +39,12 @@ public class ModFluids {
 
     public static boolean isTouchingGedritedWater(LivingEntity entity) {
         return entity.updateFluidHeightAndDoFluidPushing(ModTags.Fluids.GEDRITED_WATER, 0.014);
+    }
+
+    public static void decayEffect(LivingEntity entity) {
+        if (!entity.hasEffect(ModEffects.DECAY.getDelegate())) {
+            entity.addEffect(new MobEffectInstance(ModEffects.DECAY.getDelegate(), 60, 0, false, true, true));
+        }
     }
 
     public static void register(IEventBus eventBus) {

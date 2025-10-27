@@ -1,7 +1,10 @@
 package com.gedrite;
 
 import com.gedrite.client.particle.ModBlockLeakParticle;
+import com.gedrite.client.render.entity.GedriteArrowEntityRenderer;
+import com.gedrite.entity.ModEntities;
 import com.gedrite.fluids.ModFluids;
+import com.gedrite.items.custom.MetalDetectorItem;
 import com.gedrite.particles.ModParticleTypes;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
@@ -10,9 +13,22 @@ import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.particle.v1.ParticleFactoryRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
 import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
-import net.minecraft.client.render.BlockRenderLayer;
-import net.minecraft.client.render.RenderLayer;
+import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.fabricmc.fabric.api.client.rendering.v1.HudRenderCallback;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.gl.RenderPipelines;
+import net.minecraft.client.particle.SpellParticle;
+import net.minecraft.client.render.*;
+import net.minecraft.client.render.model.BlockStateModel;
+import net.minecraft.client.texture.Sprite;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
+import net.minecraft.util.math.Vec3d;
+import org.joml.Vector3f;
+
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 @Environment(EnvType.CLIENT)
 public class GedriteClient implements ClientModInitializer {
@@ -27,7 +43,9 @@ public class GedriteClient implements ClientModInitializer {
 
         BlockRenderLayerMap.putFluids(BlockRenderLayer.TRANSLUCENT, ModFluids.GEDRITED_WATER, ModFluids.FLOWING_GEDRITED_WATER);
 
+        EntityRendererRegistry.register(ModEntities.GEDRITE_ARROW, GedriteArrowEntityRenderer::new);
 
+        ParticleFactoryRegistry.getInstance().register(ModParticleTypes.DECAY_PARTICLE, SpellParticle.DefaultFactory::new);
         ParticleFactoryRegistry.getInstance().register(ModParticleTypes.DRIPPING_GEDRITED_WATER, spriteProvider ->
                 (parameters, world, x, y, z, velocityX, velocityY, velocityZ) -> ModBlockLeakParticle.createDrippingGedritedWater(parameters, world, x, y, z, velocityX, velocityY, velocityZ, spriteProvider));
 
@@ -37,7 +55,29 @@ public class GedriteClient implements ClientModInitializer {
         ParticleFactoryRegistry.getInstance().register(ModParticleTypes.LANDING_GEDRITED_WATER, spriteProvider ->
                 (parameters, world, x, y, z, velocityX, velocityY, velocityZ) -> ModBlockLeakParticle.createLandingGedritedWater(parameters, world, x, y, z, velocityX, velocityY, velocityZ, spriteProvider));
 
-        //        ParticleFactoryRegistry.getInstance().register(ModParticleTypes.DRIPPING_DRIPSTONE_GEDRITED_WATER, ModBlockLeakParticle::createDrippingDripstoneGedritedWater);
+//                ParticleFactoryRegistry.getInstance().register(ModParticleTypes.DRIPPING_DRIPSTONE_GEDRITED_WATER, ModBlockLeakParticle::createDrippingDripstoneGedritedWater);
 //        ParticleFactoryRegistry.getInstance().register(ModParticleTypes.FALLING_DRIPSTONE_GEDRITED_WATER, ModBlockLeakParticle::createFallingDripstoneGedritedWater);
+//        HudRenderCallback.EVENT.register((draw, tickDelta) -> {
+//            if (MetalDetectorItem.foundPos == null) return;
+//
+//            MinecraftClient mc = MinecraftClient.getInstance();
+//            if (mc.world == null || mc.player == null) return;
+//
+//            var state = mc.world.getBlockState(MetalDetectorItem.foundPos);
+//            BlockStateModel model = mc.getBlockRenderManager().getModel(state);
+//            Sprite sprite = model.particleSprite();
+//            if (sprite == null) return;
+//
+//            Vector3f screen = DetectedBlockRender.project(
+//                    Vec3d.ofCenter(MetalDetectorItem.foundPos), tickDelta.getDynamicDeltaTicks());
+//            if (screen == null) return;
+//
+//            float distanceScale = MathHelper.clamp(1.0f / (screen.z * 0.1f), 0.5f, 2.0f);
+//            int size = (int) (28 * distanceScale);
+//            int x = Math.round(screen.x) - size / 2;
+//            int y = Math.round(screen.y) - size / 2;
+//
+//            draw.drawSpriteStretched(RenderPipelines.GUI_TEXTURED, sprite, x, y, size, size);
+//        });
     }
 }

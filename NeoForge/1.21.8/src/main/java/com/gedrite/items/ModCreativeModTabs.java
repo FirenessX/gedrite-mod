@@ -12,7 +12,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModCreativeModTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
-            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Gedrite.MODID);
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, Gedrite.MOD_ID);
 
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> GEDRITE_TAB = CREATIVE_MODE_TABS.register("gedirte_tab",
             () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.GEDRITE_INGOT.get()))
@@ -21,6 +21,7 @@ public class ModCreativeModTabs {
                         pOutput.accept(ModItems.GEDRITE_INGOT.get());
                         pOutput.accept(ModItems.RAW_GEDRITE.get());
                         pOutput.accept(ModItems.GEDRITED_COAL.get());
+                        pOutput.accept(ModItems.GEDRITE_ARROW.get());
                         pOutput.accept(ModItems.METAL_DETECTOR.get());
                         pOutput.accept(ModItems.GEDRITED_WATER_BUCKET.get());
 

@@ -62,15 +62,18 @@ public class GedritedWaterFluid extends FlowingFluid {
     }
 
     @Override
-    public void animateTick(@NotNull Level pLevel, @NotNull BlockPos pPos, FluidState pState, @NotNull RandomSource pRandom) {
-        if (!pState.isSource() && !pState.getValue(FALLING)) {
-            if (pRandom.nextInt(64) == 0) {
-                pLevel.playLocalSound((double)pPos.getX() + 0.5D, (double)pPos.getY() + 0.5D, (double)pPos.getZ() + 0.5D, SoundEvents.WATER_AMBIENT, SoundSource.BLOCKS, pRandom.nextFloat() * 0.25F + 0.75F, pRandom.nextFloat() + 0.5F, false);
-            }
-        } /*else if (pRandom.nextInt(10) == 0) {
-            pLevel.addParticle(ParticleTypes.UNDERWATER, (double)pPos.getX() + pRandom.nextDouble(), (double)pPos.getY() + pRandom.nextDouble(), (double)pPos.getZ() + pRandom.nextDouble(), 0.0D, 0.0D, 0.0D);
-        }*/
+    public void animateTick(@NotNull Level level, @NotNull BlockPos pos, FluidState state, @NotNull RandomSource random) {
+//        if (!pState.isSource() && !pState.getValue(FALLING)) {
+//            if (pRandom.nextInt(64) == 0) {
+//                pLevel.playLocalSound((double)pPos.getX() + 0.5D, (double)pPos.getY() + 0.5D, (double)pPos.getZ() + 0.5D, SoundEvents.WATER_AMBIENT, SoundSource.BLOCKS, pRandom.nextFloat() * 0.25F + 0.75F, pRandom.nextFloat() + 0.5F, false);
+//            }
+//        } else if (pRandom.nextInt(10) == 0) {
+//            pLevel.addParticle(ParticleTypes.UNDERWATER, (double)pPos.getX() + pRandom.nextDouble(), (double)pPos.getY() + pRandom.nextDouble(), (double)pPos.getZ() + pRandom.nextDouble(), 0.0D, 0.0D, 0.0D);
+//        }
 
+        if (random.nextInt(50) == 0) {
+            level.addParticle(ModParticles.DECAY_PARTICLE.get(), pos.getX() + 0.5, pos.getY() + 1.0, pos.getZ() + 0.0, Math.sin(level.getGameTime()), 1.0 , Math.sin(level.getGameTime()));
+        }
     }
 
     @Nullable

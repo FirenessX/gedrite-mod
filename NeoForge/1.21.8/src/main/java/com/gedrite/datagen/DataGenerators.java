@@ -18,7 +18,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-@EventBusSubscriber(modid = Gedrite.MODID)
+@EventBusSubscriber(modid = Gedrite.MOD_ID)
 public class DataGenerators {
     @SubscribeEvent
     public static void gatherClientData(GatherDataEvent.Client event) {
@@ -40,9 +40,9 @@ public class DataGenerators {
             }
         });
 
-        BlockTagsProvider blockTagsProvider = new ModBlockTagProvider(packOutput, lookupProvider, Gedrite.MODID);
+        BlockTagsProvider blockTagsProvider = new ModBlockTagProvider(packOutput, lookupProvider, Gedrite.MOD_ID);
         generator.addProvider(true, blockTagsProvider);
-        generator.addProvider(true, new ModItemTagGenerator(packOutput, lookupProvider, Gedrite.MODID));
+        generator.addProvider(true, new ModItemTagGenerator(packOutput, lookupProvider, Gedrite.MOD_ID));
 
         generator.addProvider(true, new ModModelProvider(packOutput));
     }
@@ -67,9 +67,9 @@ public class DataGenerators {
             }
         });
 
-        BlockTagsProvider blockTagsProvider = new ModBlockTagProvider(packOutput, lookupProvider, Gedrite.MODID);
+        BlockTagsProvider blockTagsProvider = new ModBlockTagProvider(packOutput, lookupProvider, Gedrite.MOD_ID);
         generator.addProvider(true, blockTagsProvider);
-        generator.addProvider(true, new ModItemTagGenerator(packOutput, lookupProvider, Gedrite.MODID));
+        generator.addProvider(true, new ModItemTagGenerator(packOutput, lookupProvider, Gedrite.MOD_ID));
 
         generator.addProvider(true, new ModModelProvider(packOutput));
     }

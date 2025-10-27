@@ -1,6 +1,7 @@
 package com.gedrite.blocks.custom;
 
 import com.gedrite.core.cauldron.ModCauldronInteraction;
+import com.gedrite.fluids.ModFluids;
 import com.gedrite.world.effects.ModEffects;
 import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
@@ -33,7 +34,9 @@ public class GedritedWaterCauldronBlock extends AbstractCauldronBlock {
 
     @Override
     public void entityInside(@NotNull BlockState state, @NotNull Level level, @NotNull BlockPos pos, @NotNull Entity entity, @NotNull InsideBlockEffectApplier applier) {
-
+        if (entity instanceof LivingEntity livingEntity) {
+            ModFluids.decayEffect(livingEntity);
+        }
     }
 
     @Override

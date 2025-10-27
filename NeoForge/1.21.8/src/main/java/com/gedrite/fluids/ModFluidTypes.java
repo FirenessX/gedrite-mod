@@ -20,11 +20,11 @@ import org.jetbrains.annotations.Nullable;
 import org.joml.Vector4f;
 
 public class ModFluidTypes {
-    public static final ResourceLocation GEDRITED_WATER_STILL_RL = ResourceLocation.fromNamespaceAndPath(Gedrite.MODID, "block/gedrited_water_still");
-    public static final ResourceLocation GEDRITED_WATER_FLOWING_RL = ResourceLocation.fromNamespaceAndPath(Gedrite.MODID, "block/gedrited_water_flow");
-    public static final ResourceLocation GEDRITED_WATER_OVERLAY_RL = ResourceLocation.fromNamespaceAndPath(Gedrite.MODID, "misc/in_gedrited_water");
+    public static final ResourceLocation GEDRITED_WATER_STILL_RL = ResourceLocation.fromNamespaceAndPath(Gedrite.MOD_ID, "block/gedrited_water_still");
+    public static final ResourceLocation GEDRITED_WATER_FLOWING_RL = ResourceLocation.fromNamespaceAndPath(Gedrite.MOD_ID, "block/gedrited_water_flow");
+    public static final ResourceLocation GEDRITED_WATER_OVERLAY_RL = ResourceLocation.fromNamespaceAndPath(Gedrite.MOD_ID, "misc/in_gedrited_water");
 
-    public static final DeferredRegister<FluidType> FLUID_TYPES = DeferredRegister.create(NeoForgeRegistries.Keys.FLUID_TYPES, Gedrite.MODID);
+    public static final DeferredRegister<FluidType> FLUID_TYPES = DeferredRegister.create(NeoForgeRegistries.Keys.FLUID_TYPES, Gedrite.MOD_ID);
 
     public static final DeferredHolder<FluidType, FluidType> GEDRITED_WATER_FLUID_TYPE = FLUID_TYPES.register("gedrited_water", () -> new FluidType(FluidType.Properties.create()
                     .canSwim(false)

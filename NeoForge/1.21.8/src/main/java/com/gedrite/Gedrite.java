@@ -9,7 +9,9 @@ import com.gedrite.fluids.ModFluidTypes;
 import com.gedrite.fluids.ModFluids;
 import com.gedrite.items.ModCreativeModTabs;
 import com.gedrite.items.ModItems;
+import com.gedrite.sounds.ModSoundEvents;
 import com.gedrite.world.effects.ModEffects;
+import com.gedrite.world.entity.ModEntities;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.bus.api.IEventBus;
@@ -23,10 +25,10 @@ import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.slf4j.Logger;
 
-@Mod(Gedrite.MODID)
+@Mod(Gedrite.MOD_ID)
 public class Gedrite {
 
-    public static final String MODID = "gedrite";
+    public static final String MOD_ID = "gedrite";
 
     public static final Logger LOGGER = LogUtils.getLogger();
 
@@ -43,14 +45,13 @@ public class Gedrite {
         ModFluidTypes.register(modEventBus);
         ModEffects.register(modEventBus);
         ModParticles.register(modEventBus);
+        ModSoundEvents.register(modEventBus);
+        ModEntities.register(modEventBus);
         modEventBus.addListener(ModEventBus::registerParticleFactories);
         modEventBus.addListener(ModFluidTypes::registerClientItemExtensions);
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
-//        NeoForge.EVENT_BUS.register(ModEventBusEvents.class);
-
-
         event.enqueueWork(() -> {
             ModCauldronInteraction.registerBehavior();
             ModDispenserItemBehavior.registerBehavior();
@@ -71,7 +72,10 @@ public class Gedrite {
         if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(ModItems.METAL_DETECTOR);
             event.accept(ModItems.GEDRITED_WATER_BUCKET);
+        }
 
+        if(event.getTabKey() == CreativeModeTabs.COMBAT) {
+            event.accept(ModItems.GEDRITE_ARROW);
         }
 
         if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {

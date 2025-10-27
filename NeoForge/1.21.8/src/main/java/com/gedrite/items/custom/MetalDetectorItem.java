@@ -1,10 +1,13 @@
 package com.gedrite.items.custom;
 
 
+import com.gedrite.sounds.ModSoundEvents;
 import com.gedrite.util.ModTags;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
@@ -12,7 +15,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.TooltipDisplay;
-import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
@@ -26,10 +29,9 @@ public class MetalDetectorItem extends Item {
     }
 
     @Override
-    public @NotNull InteractionResult useOn(UseOnContext pContext) {
-        BlockPos playerPos = pContext.getClickedPos();
-        Player player = pContext.getPlayer();
-        if(!pContext.getLevel().isClientSide()){
+    public @NotNull InteractionResult use(Level level, @NotNull Player player, @NotNull InteractionHand hand) {
+        if(!level.isClientSide()){
+            level.playSound(null, new BlockPos(player.getBlockX(), player.getBlockY(), player.getBlockZ()), ModSoundEvents.METAL_DETECTOR_USE.get(), SoundSource.BLOCKS);
             boolean foundBlock = false;
 
             int sphereRadius = 8;
@@ -39,17 +41,12 @@ public class MetalDetectorItem extends Item {
             for (int x = -sphereRadius; x <= sphereRadius; x++) {
                 for (int y = -sphereRadius; y <= sphereRadius; y++) {
                     for (int z = -sphereRadius; z <= sphereRadius; z++) {
-                        BlockPos blockPos = new BlockPos(playerPos.getX() + x, playerPos.getY() + y, playerPos.getZ() + z);
+                        BlockPos blockPos = new BlockPos(player.getOnPos().getX() + x, player.getOnPos().getY() + y, player.getOnPos().getZ() + z);
 
                         int distanceSq = (x * x) + (y * y) + (z * z);
                         if (distanceSq <= radiusSq) {
-                            BlockState state = pContext.getLevel().getBlockState(blockPos);
-//                            System.out.println(state);
-//                            System.out.println(state.getTags());
-//                            System.out.println(ModTags.Blocks.METAL_BLOCKS_FOR_MD);
+                            BlockState state = level.getBlockState(blockPos);
                             if(isValuableBlock(state)){
-//                                System.out.println("OPA");
-                                assert player != null;
                                 outputValuableCoordinates(blockPos, player, state.getBlock());
                                 foundBlock = true;
 
@@ -60,14 +57,11 @@ public class MetalDetectorItem extends Item {
                 }
             }
             if(!foundBlock){
-//                System.out.println("5");
-                assert player != null;
                 player.displayClientMessage(Component.translatable("gedrite.metal_detector.dontFoundBlock"), true);
             }
         }
 
-        assert player != null;
-        pContext.getItemInHand().hurtAndBreak(1, player, LivingEntity.getSlotForHand(pContext.getHand()));
+        player.getItemInHand(hand).hurtAndBreak(1, player, LivingEntity.getSlotForHand(hand));
         return InteractionResult.SUCCESS;
     }
 
