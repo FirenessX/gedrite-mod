@@ -1,0 +1,39 @@
+# See https://docs.minecraftforge.net/en/1.21.x/gettingstarted/modfiles/#modstoml
+# There are lots of things you can do with the mods.toml, and not all fields are included with this MDK
+# References: https://github.com/MinecraftForge/MDKExamples
+
+modLoader="javafml"
+loaderVersion="[61,)"
+license="GNU Lesser General Public License"
+#issueTrackerURL="https://github.com/MyOrganization/MyMod/" #optional
+#clientSideOnly=true #optional, default=false
+
+[[mods]]
+modId="gedrite"
+version="2.2.1"
+displayName="Gedrite Mod"
+#updateJSONURL="https://example.com/updates.json" #optional
+#displayURL="https://example.com/" #optional
+#logoFile="gedrite.png" #optional
+#credits="" #optional
+authors="TheFireness" #optional
+#displayTest="MATCH_VERSION" #optional, default=MATCH_VERSION when not clientSideOnly, else IGNORE_ALL_VERSION
+
+description='''Adds Gedrite in your world. Gedrite is a liquid and useful metal, you can even eat it! See more information in "Gedrite Mod" page in Curseforge/Modrinth \n\nuk_UA translation by StarmanMine142'''
+
+[[mixins]]
+config="gedrite.mixins.json"
+
+[[dependencies.gedrite]] #recommended
+    modId="forge"
+    mandatory=true
+    versionRange="[61,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.gedrite]] #recommended
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.21.11,1.22,)"
+    ordering="NONE"
+    side="BOTH"

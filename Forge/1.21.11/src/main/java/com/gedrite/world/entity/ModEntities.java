@@ -1,0 +1,34 @@
+package com.gedrite.world.entity;
+
+import com.gedrite.Gedrite;
+import com.gedrite.world.entity.projectile.GedriteArrow;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobCategory;
+import net.minecraftforge.eventbus.api.bus.BusGroup;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.ForgeRegistries;
+
+import java.util.function.Supplier;
+
+public class ModEntities {
+    public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
+            DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, Gedrite.MOD_ID);
+
+    public static final ResourceKey<EntityType<?>> GEDRITE_ARROW_KEY = ResourceKey.create(Registries.ENTITY_TYPE, Identifier.withDefaultNamespace("gedrite_arrow"));
+
+    public static final Supplier<EntityType<GedriteArrow>> GEDRITE_ARROW =
+            ENTITY_TYPES.register("gedrite_arrow", () -> EntityType.Builder.<GedriteArrow>of(GedriteArrow::new, MobCategory.MISC)
+                    .noLootTable()
+                    .sized(0.5F, 0.5F)
+                    .eyeHeight(0.13F)
+                    .clientTrackingRange(4)
+                    .updateInterval(20)
+                    .build(GEDRITE_ARROW_KEY));
+
+    public static void register(BusGroup busGroup) {
+        ENTITY_TYPES.register(busGroup);
+    }
+}
