@@ -19,6 +19,7 @@
 + ![Gedrited Water Bucket](https://i.imgur.com/1730gMC.png) Gedrited Water Bucket
 
 ![Gedrite Items](https://i.imgur.com/NBQSo94.png)
+<br><br>
 ![Metal Detector Recipe](https://i.imgur.com/SPdyUmm.png)
 
 + ![Gedrite Arrow](https://i.imgur.com/KdG5kER.png) Gedrite Arrow
@@ -43,7 +44,7 @@
   + **Gedrited Water** is a deadly liquid that gives ![Decay](https://i.imgur.com/PUioi3l.png) **Decay** effect to any **living creature.** The only way to get this fluid - place **water** next to ![Gedrite Block](https://i.imgur.com/h54qh5V.png) **Gedrite Block** 
 
 ![Gedrited Water](https://i.imgur.com/MOsyWWC.png)
-<br></br>
+<br><br>
 ![Gedrited Water Interaction](https://i.imgur.com/G38vP7M.png)
  
 ## Effects:
