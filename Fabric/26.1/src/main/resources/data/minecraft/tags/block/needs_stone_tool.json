@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "gedrite:raw_gedrite_block",
+    "gedrite:gedrite_ore",
+    "gedrite:deepslate_gedrite_ore"
+  ]
+}

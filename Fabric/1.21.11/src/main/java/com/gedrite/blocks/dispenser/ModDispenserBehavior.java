@@ -19,21 +19,6 @@ import net.minecraft.world.World;
 public interface ModDispenserBehavior {
     static void registerDefaults() {
         DispenserBlock.registerProjectileBehavior(ModItems.GEDRITE_ARROW);
-//        ItemDispenserBehavior dispenserBehavior = new ItemDispenserBehavior(){
-//            private final ItemDispenserBehavior fallbackBehavior = new ItemDispenserBehavior();
-//
-//            @Override
-//            public ItemStack dispenseSilently(BlockPointer pointer, ItemStack stack) {
-//                FluidModificationItem fluidModificationItem = (FluidModificationItem) stack.getItem();
-//                BlockPos blockPos = pointer.getPos().offset(pointer.getBlockState().get(DispenserBlock.FACING));
-//                ServerWorld world = pointer.getWorld();
-//                if (fluidModificationItem.placeFluid(null, world, blockPos, null)) {
-//                    fluidModificationItem.onEmptied(null, world, stack, blockPos);
-//                    return new ItemStack(Items.BUCKET);
-//                }
-//                return this.fallbackBehavior.dispense(pointer, stack);
-//            }
-//        };
         DispenserBehavior dispenserBehavior = new ItemDispenserBehavior() {
             private final ItemDispenserBehavior fallbackBehavior = new ItemDispenserBehavior();
 

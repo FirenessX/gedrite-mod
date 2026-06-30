@@ -36,7 +36,7 @@ public class ModFluids {
     }
 
     public static boolean isTouchingGedritedWater(Entity entity) {
-        return entity.updateMovementInFluid(ModTags.Fluids.GEDRITED_WATER, 0.014);
+        return entity.  updateMovementInFluid(ModTags.Fluids.GEDRITED_WATER, 0.014);
     }
 
     public static void decayEffect(Entity entity){
