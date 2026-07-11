@@ -1,0 +1,28 @@
+modLoader="javafml"
+loaderVersion="[62,)"
+license="GNU Lesser General Public License"
+
+[[mods]]
+modId="gedrite"
+version="2.2.1"
+displayName="Gedrite Mod"
+authors="TheFireness"
+
+description='''Adds Gedrite in your world. Gedrite is a liquid and useful metal, you can even eat it! See more information in "Gedrite Mod" page in Curseforge/Modrinth \n\nuk_UA translation by StarmanMine142'''
+
+[[mixins]]
+config="gedrite.mixins.json"
+
+[[dependencies.gedrite]] #recommended
+    modId="forge"
+    mandatory=true
+    versionRange="[62,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.gedrite]] #recommended
+    modId="minecraft"
+    mandatory=true
+    versionRange="[26.1,26.2,)"
+    ordering="NONE"
+    side="BOTH"

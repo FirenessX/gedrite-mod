@@ -30,7 +30,7 @@
 		"gedrite.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.14.21",
+		"fabricloader": ">=0.19.2",
 		"minecraft": "~26.1",
 		"java": ">=25",
 		"fabric-api": "*"

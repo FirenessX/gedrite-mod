@@ -1,0 +1,8 @@
+{
+  "metal_detector_use": {
+    "subtitle": "sounds.gedrite.metal_detector_use",
+    "sounds": [
+      "gedrite:metal_detector_use"
+    ]
+  }
+}
