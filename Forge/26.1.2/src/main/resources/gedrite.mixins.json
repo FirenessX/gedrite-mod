@@ -1,0 +1,21 @@
+{
+  "required": true,
+  "package": "com.gedrite.mixins",
+  "refmap": "gedrite.refmap.json",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "DispatcherInvoker",
+    "EntityMixin",
+    "FishingHookMixin",
+    "FlowingFluidMixin",
+    "FluidInteractionRegistryMixin",
+    "LavaFluidMixin",
+    "LivingEntityMixin",
+    "WaterFluidMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+  ]
+}

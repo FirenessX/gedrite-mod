@@ -1,0 +1,36 @@
+{
+  "item.gedrite.gedrite_ingot": "Ґедритовий злиток",
+  "item.gedrite.raw_gedrite": "Необроблений ґедрит",
+  "item.gedrite.gedrited_coal": "Ґедритове вугілля",
+  "item.gedrite.metal_detector": "Металодетектор",
+  "item.gedrite.gedrited_water_bucket": "Відро ґерадитової води",
+  "item.gedrite.gedrite_arrow": "Гедритная стрiла",
+
+
+  "block.gedrite.gedrite_ore": "Ґерадитова руда",
+  "block.gedrite.deepslate_gedrite_ore": "Глибосланцева ґерадитова руда",
+  "block.gedrite.gedrite_block": "Блок ґедриту",
+  "block.gedrite.raw_gedrite_block": "Блок необробленого ґедриту",
+  "block.gedrited_water_block": "Ґедритова вода",
+
+  "block.gedrite.black_sapote_log": "Black Sapote Log",
+  "block.gedrite.black_sapote_wood": "Black Sapote Wood",
+  "block.gedrite.stripped_black_sapote_log": "Stripped Black Sapote Log",
+  "block.gedrite.stripped_black_sapote_wood": "Stripped Black Sapote Wood",
+  "block.gedrite.black_sapote_planks": "Black Sapote Planks",
+  "block.gedrite.black_sapote_leaves": "Black Sapote Leaves",
+  "block.gedrite.black_sapote_sapling": "Black Sapote Sapling",
+
+  "effect.gedrite.decay": "Гниття",
+
+  "death.attack.decay": "%1$s згнив заживо",
+
+  "creativetab.gedrite_tab": "Гедрит",
+
+  "tooltip.gedrite.metal_detector.tooltip": "Знаходить метали в кулі радіусом 8 блоків",
+  "gedrite.metal_detector.foundBlock": "Успіх: ",
+  "gedrite.metal_detector.dontFoundBlock": "ПОМИЛКА: Продовжуйте шукати в іншому місці",
+  "trim_material.gedrite.gedrite": "Гедритова",
+
+  "sounds.gedrite.metal_detector_use": "Металодетектор активовано"
+}

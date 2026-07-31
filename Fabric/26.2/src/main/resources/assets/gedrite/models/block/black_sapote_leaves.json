@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "gedrite:block/black_sapote_leaves"
+  }
+}

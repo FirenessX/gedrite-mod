@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "gedrite:block/black_sapote_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "gedrite:block/black_sapote_wood"
+    },
+    "axis=z": {
+      "model": "gedrite:block/black_sapote_wood",
+      "x": 90
+    }
+  }
+}
